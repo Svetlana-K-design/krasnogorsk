@@ -1,0 +1,98 @@
+.social--footer {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cacaca;
+}
+.social__title {
+  display: none;
+}
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.social__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+.social__link--vk {
+  background-image: url(../img/icons/icon-vk.svg);
+}
+.social__link--insta {
+  background-image: url(../img/icons/icon-inst.svg);
+}
+.social__link--fb {
+  background-image: url(../img/icons/icon-fb.svg);
+}
+.social__link--youtube {
+  background-image: url(../img/icons/icon-you.svg);
+}
+.social__link--ok {
+  background-image: url(../img/icons/icon-ok.svg);
+}
+.social__link--tt {
+  background-image: url(../img/icons/icon-tiktok.svg);
+}
+.social__list--nav .social__link--vk {
+  background-image: url(../img/icons/icon-vk-blue.svg);
+}
+.social__list--nav .social__link--insta {
+  background-image: url(../img/icons/icon-inst-blue.svg);
+}
+.social__list--nav .social__link--fb {
+  background-image: url(../img/icons/icon-fb-blue.svg);
+}
+.social__list--nav .social__link--youtube {
+  background-image: url(../img/icons/icon-you-blue.svg);
+}
+.social__list--nav .social__link--ok {
+  background-image: url(../img/icons/icon-ok-blue.svg);
+}
+.social__list--nav .social__link--tt {
+  background-image: url(../img/icons/icon-tiktok-blue.svg);
+}
+.social__link:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+.social__item + .social__item {
+  margin-left: 22px;
+}
+@media (min-width: 768px) {
+  .social__title {
+    display: block;
+    margin: 0;
+    margin-right: 25px;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: .7px;
+  }
+  .social--footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}

@@ -1,0 +1,28 @@
+.copyright__info {
+    display: block;
+}
+
+.copyright__info+.copyright__info {
+    margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+    .copyright {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        opacity: 0.9;
+    }
+
+    .copyright__info {
+        width: 30%;
+        font-size: 16px;
+    }
+
+    .copyright__info+.copyright__info {
+        margin-top: 0;
+    }
+}

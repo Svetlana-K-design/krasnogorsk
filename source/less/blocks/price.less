@@ -1,0 +1,165 @@
+.price {
+  width: 100%;
+  background-color: @white-basic;
+}
+
+.price__wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 50px 24px 34px;
+
+  @media (min-width: @desktop-width) {
+    padding: 81px 24px;
+  }
+}
+
+.price__list {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.price__controls {
+  text-align: center;
+  margin-bottom: 23px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.price__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: @bg-grey;
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 17px;
+
+  @media (min-width: @desktop-width) {
+    width: 310px;
+    margin-bottom: 0;
+  }
+}
+
+/**Text**/
+
+.price__subtitle {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.price__bold {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.price__text {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 24px;
+
+  &--left {
+    text-align: left;
+    margin-bottom: 30px;
+    align-self: flex-start;
+  }
+}
+
+.price__item:nth-child(2) .price__text--left {
+  margin-bottom: 12px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+  }
+
+}
+
+/**Button**/
+
+.price__button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.price__item-link {
+  display: block;
+  width: 98.5%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border: 2px solid #a2a2a2;
+  color: #a5a5a5;
+  padding: 13px 0;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.price__tabs {
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price__tabs label {
+	order: 1; 
+	display: block;
+	font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #a2a2a2;
+	cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #a2a2a2;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 2px;
+  }
+
+}
+
+.price__tabs label:last-of-type {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 1px;
+  }
+}
+
+.price__tabs .price__tab {
+  order: 99;
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 25px 0 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 22px 0 0;
+  }
+}
+
+.price__tabs input[type="radio"] {
+	display: none;
+}
+
+.price__tabs input[type="radio"]:checked + label {
+	border-bottom: 1px solid @decor-blue;
+  color: @decor-blue;
+}
+
+.price__tabs input[type="radio"]:checked + label + .price__tab {
+	display: block;
+}

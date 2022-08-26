@@ -1,0 +1,97 @@
+.worksheet {
+  width: 100%;
+  background-color: @bg-grey;
+}
+
+.worksheet__wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 50px 24px 43px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 80px 24px;
+  }
+}
+
+
+.worksheet__content {
+  @media (min-width: @tablet-width) {
+    margin-right: 30px;
+  }
+}
+
+/**Text**/
+
+.worksheet__subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 14px;
+
+  &--item {
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 20px;
+
+    &--item {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.worksheet__subtitle-mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.worksheet__desc {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 9px;
+
+  &--last {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 12px;
+
+    &--last {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+
+.worksheet__title-mobile {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}
+
+
+/**Photo**/
+
+.worksheet__photo {
+  width: 312px;
+  height: 180px;
+
+  @media (min-width: @desktop-width) {
+    width: 541px;
+    height: auto;
+  }
+}

@@ -1,0 +1,261 @@
+.form {
+  background-color: @white-basic;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 22px;
+  }
+}
+
+.form__box {
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+}
+
+.form__title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: "Qanelas", "Tahoma", sans-serif;
+}
+
+.form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__item {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-family: "Qanelas", "Tahoma", sans-serif;
+
+  p {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &--checkbox {
+    margin-bottom: 20px;
+  }
+}
+
+.form__label {
+  font-family: "Qanelas", "Tahoma", sans-serif;
+  padding-left: 28px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.form__input + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cce1ff;
+  background-color: #f6f7f7;
+  cursor: pointer;
+}
+
+.form__input--radio + label::before {
+  border-radius: 50%;
+}
+
+.form__input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #cce1ff;
+  background-image: url("../img/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form__input--radio:checked + label::after {
+  border: 2px solid #cce1ff;
+  background-color: @decor-blue;
+  border-radius: 50%;
+}
+
+.form__input--checkbox:checked + label::after {
+  border: 2px solid @decor-blue;
+  background-image: url("../img/icons/check-blue.svg");
+  outline: none;
+}
+
+datalist {
+  display: flex;
+  width: 98%;
+  max-width: 298px;
+  justify-content: space-between;
+  margin-top: -8px;
+
+    option {
+      font-family: "Qanelas", "Tahoma", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: @base-font;
+    }
+}
+
+
+input[type=range] {
+  width: 98%;
+  max-width: 298px;
+  appearance: none;
+  overflow: hidden;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 4px;
+  background-color: #cce1ff;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: @decor-blue;
+  border: 2px solid #cce1ff;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 4px;
+  background-color: #cce1ff;
+}
+
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  background-color: @decor-blue;
+  border: 2px solid #cce1ff;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+}
+
+input[type=range]::-moz-range-progress {
+  background-color: @decor-blue; 
+}
+
+input[type=range]::-moz-range-track {  
+  background-color: #cce1ff;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: @decor-blue; 
+}
+
+input[type="range"]::-ms-fill-upper {  
+  background-color: #cce1ff;
+}
+
+
+.form__link {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  font-family: "Qanelas", "Tahoma", sans-serif;
+  color: #606060;
+  margin-bottom: 11px;
+
+  a {
+    color: #63a1f9;
+    text-decoration: underline;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+/**Button**/
+
+.form__button {
+  font-family: "Qanelas", "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  background-color: @yellow-button;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 5px;
+
+  &--submit {
+    font-size: 14px;
+  }
+
+  &--worksheet {
+    padding: 15px 49px;
+  }
+
+  &--stock {
+    padding: 5px 26px;
+  }
+
+  &--footer {
+    padding: 15px 24px;
+  }
+
+  &--price {
+    padding: 15px 34px;
+  }
+
+  &--design {
+    padding: 15px 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    padding: 15px 43px;
+
+    &--stock {
+      padding: 15px 24px;
+    }
+
+    &--footer {
+      padding: 15px 24px;
+    }
+
+    &--design {
+      padding: 15px 24px;
+    }
+  }
+}
+
+.form__button--worksheet {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 22px;
+
+  @media (min-width: @desktop-width) {
+    width: initial;
+    margin-bottom: 0;
+    padding: 15px 60px;
+  }
+}
+

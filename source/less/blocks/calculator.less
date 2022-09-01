@@ -1,0 +1,246 @@
+.calculator {
+  width: 100%;
+}
+
+.calculator__container {
+  @media(min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 14px;
+  }
+}
+
+.calculator__flex {
+  @media(min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: @white-basic;
+    border-radius: 14px;
+    padding: 25px 32px;
+    margin-bottom: 18px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.calculator__title {
+  .title-h3();
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.calculator__wrapper {
+  padding: 24px 20px;
+  border-radius: 14px;
+
+  &--white,
+  &--advantage {
+    background-color: @white-basic;
+    margin-bottom: 18px;
+
+    @media(min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--white {
+    @media(min-width: @tablet-width) {
+      padding: 0;
+      margin-right: 31px;
+    }
+  }
+
+  &--grey {
+    background-color: @bg-block-grey;
+    padding: 20px 16px;
+    
+    box-sizing: 317px;
+    margin-bottom: 18px;
+
+    @media(min-width: @tablet-width) {
+      max-width: 317px;
+    }
+
+    @media(min-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--advantage {
+    @media(min-width: @desktop-width) {
+      order: -1;
+      margin-right: 30px;
+      max-width: 340px;
+      box-sizing: border-box;
+      padding: 30px 24px;
+    }
+  }
+}
+
+.calculator__link {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "Golos", "Arial", sans-serif;
+  color: @decor-blue;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-align: center;
+  text-underline-offset: 5px;
+
+  @media(min-width: 361px) {
+    text-align: left;
+  }
+
+  @media(min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+//Grey-list
+.calculator__subtitle {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.calculator__remont-list {
+  .list-reset();
+  margin-bottom: 110px; 
+}
+
+.calculator__remont-item {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 0;
+  margin-bottom: 4px;
+  position: relative;
+  padding-left:  14px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(50% - 3px);
+    width: 6px;
+    height: 6px;
+    background-color: #ffc69d;
+  }
+}
+
+.calculator__total {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0;
+
+  span {
+    color: #ffc69d;
+  }
+}
+
+.calculator__wrapper--grey p + p {
+  margin-top: 4px;
+}
+
+//Advantage-list
+
+.calculator__advantage-list {
+  .list-reset();
+
+  @media(min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @media(min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.calculator__advantage-item {
+  font-size: 16px;
+  padding: 0;
+  position: relative;
+  padding-left:  68px;
+  display: block;
+  min-height: 52px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: #eaecee;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width:@tablet-width) and (max-width:1099px) {
+    width: 40%;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-bottom: 48px;
+    width: auto; 
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  } 
+}
+
+.calculator__advantage-item--money::before {
+    background-image: url("../img/icons/money.svg");
+  }
+
+
+.calculator__advantage-item--100 {
+    &::before {
+    background-image: url("../img/icons/100.svg");
+    }
+}
+
+.calculator__advantage-item--package {
+    padding-top: 7px;
+    padding-bottom: 9px;
+
+     &::before {
+    background-image: url("../img/icons/package.svg");
+  }
+
+  @media (min-width:420px) and (max-width:1099px) {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+
+  @media(min-width: @desktop-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+}
+
+.calculator__advantage-item--shield::before {
+    background-image: url("../img/icons/shield.svg");
+}

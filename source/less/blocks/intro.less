@@ -26,6 +26,12 @@
   font-weight: 600;
   margin: 0;
   margin-bottom: 14px;
+
+  @media(min-width: @desktop-width) {
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 16px;
+  }
 }
 
 .intro__title span {
@@ -37,6 +43,11 @@
   line-height: 24px;
   font-weight: 400;
   margin: 0;
+
+  @media(min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .intro__block-text {
@@ -44,7 +55,7 @@
 
   @media(min-width: @tablet-width) {
     text-align: left;
-    max-width: 33%;
+    max-width: 50%;
   }
 }
 
@@ -53,7 +64,7 @@
 
     @media(min-width: @tablet-width) {
       display: block;
-      max-width: 65%;
+      max-width: 50%;
     }
 }
 

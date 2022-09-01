@@ -1,0 +1,140 @@
+.video-reviews {
+    background-color: @white-basic;
+    text-align: center;
+}
+
+.video-reviews__title {
+    .title-h2();
+    margin-bottom: 24px;
+
+    @media(min-width: @desktop-width) {
+      margin-bottom: 32px;
+    }
+}
+
+.video-reviews__wrapper {
+    margin-bottom: 24px;
+
+    @media(min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 24px;
+        align-items: stretch;
+    }
+}
+
+.video-reviews__column {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    height: auto;
+    opacity: 1;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    overflow: visible;
+
+    @media(min-width: @tablet-width)  {
+    max-width: calc(50% - 15px);
+    margin: 0;
+    }
+
+    @media(min-width: 992px) {
+        max-width: calc(100% / 3 - 21px);
+    }
+ }
+
+.video-reviews__column + .video-reviews__column {
+    margin-top: 24px;
+
+    @media(min-width: @tablet-width) {
+        margin-top: 0;
+    }
+  }
+
+  /*.video-reviews__column--hidden {
+    position: absolute;
+    margin: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  .video-reviews__column.video-reviews__column--hidden {
+    margin-top: 0;
+  }*/
+
+
+.video-reviews__youtube {
+    position: relative;
+    max-width: 414px;
+    min-height: 207px;
+    margin-bottom: 8px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  .video-reviews iframe {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .video-reviews__head {
+    margin: 0;
+    color: #ff5a00;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+
+  .video-reviews__desc {
+    text-align: left;
+  }
+
+  .video-reviews__name  {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  .video-reviews__info {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0;
+
+    span {
+        color: @decor-orange;
+    }
+}
+
+.video-reviews__info + .video-reviews__info {
+    margin-top: 4px;
+}
+
+  .video-reviews__play {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 32px;
+    height: 22px;
+    background: url("../img/icons/youtube-1.svg");
+    background-repeat: no-repeat;
+    border: none;
+    background-size: inherit;
+    cursor: pointer;
+  }
+
+  .video-reviews__button {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: @decor-blue;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }

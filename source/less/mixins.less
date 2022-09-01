@@ -16,6 +16,27 @@
   font-weight: 600;
   color: @color-text;
   text-align: center;
+  margin: 0;
+
+  @media(min-width: @desktop-width) {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+.title-h3() {
+  font-family: "Golos", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  color: @color-text;
+  text-align: center;
+  margin: 0;
+
+  @media(min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 
@@ -26,6 +47,7 @@
 
   font-size: 18px;
   line-height: 24px;
+  font-weight: 600;
   font-family: "Golos", "Arial", sans-serif;
   color: @color-text;
   text-align: center;
@@ -33,6 +55,7 @@
   border-radius: 5px;
   border: 2px solid @decor-orange;
   background-color: @decor-orange;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   cursor: pointer;
   outline: none;
@@ -42,12 +65,7 @@
   }
 
   &:active  {
-    color: @decor-blue;
     background-color: transparent;
-  }
-
-  @media(min-width: @480px) {
-    max-width: 218px;
   }
 }
 

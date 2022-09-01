@@ -1,80 +1,179 @@
 .master {
+  width: 100%;
+}
+
+.master__title {
+  .title-h2();
+  margin-bottom: 24px;
+}
+
+.master__photo {
+  min-width: 328px;
+  border-radius: 10px;
+  margin: 0;
+  margin-bottom: 14px;
+
+  @media(min-width: @desktop-width) {
+    margin-bottom: 0;
+    width: 635px;
+  }
+}
+
+.master__img {
+  border-radius: 10px;
+  margin: 0;
+  display: block;
+}
+
+.master__desc {
   background-color: @white-basic;
-}
-.master__wrapper {
-  margin: 0 auto;
-  padding: 48px 24px;
+  padding: 16px;
+  border-radius: 10px;
 
-  @media (min-width: @desktop-width) {
-    padding: 76px 24px 65px;
+  @media(min-width: @desktop-width) {
+    padding: 20px 24px;
+    max-width: 443px;
+    box-sizing: border-box;
   }
 }
 
-.master__content {
-  padding: 0 9px 0 12px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  position: relative;
-  min-height: 205px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    background-color: @bg-grey;
-    border-radius: 10px;
-    z-index: -1;
-    left: 0;
-    bottom: 7px;
-  }
-
-  @media (min-width: @desktop-width) {
+.master__flex {
+    min-width: 0;
     max-width: 540px;
-    padding: 0 17px 0 47px;
+    margin: 0 auto;
 
-    &::before {
-      height: 138px;
-      max-width: 540px;
+  @media(min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 32px;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.master__list {
+  margin-bottom: 12px;
+
+  @media(min-width: @desktop-width) {
+    margin-bottom: 14px;
+
+    &:last-of-type {
+      margin-bottom: 47px;
     }
   }
+
 }
 
-.master__caption {
-  order: -1;
-  text-align: left;
-  width: 41%;
+//text {
+  .master__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 4px;
+
+    @media(min-width: @desktop-width) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 0;
+    }
+
+    &--name {
+      font-size: 20px;
+      line-height: 28px;
+
+      @media(min-width: @desktop-width) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .master__text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+
+    &--name {
+      color: @decor-orange;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500;
+
+      @media(min-width: @desktop-width) {
+        font-size: 20px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .master__say {
+    margin: 0;
+    padding-left: 4px;
+    color: #6d6d6d;
+    border-left: 3px solid #eeeeee;
+  }
+
+//Tabs and arrows
+
+.master__tabs  {
+  margin: 0 auto;
+  min-width: 284px;
+  max-width: 760px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 95px;
+  justify-content: space-between;
+  margin-bottom: 20px; 
+  z-index: 10;
+  position: relative;
 
-  @media (min-width: @desktop-width)  {
-    height: 154px;
+  @media(min-width: 992px) {
+    margin-bottom: -20px; 
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-bottom: -28px; 
   }
 }
 
-.master__subtitle {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 700;
-  margin: 0;
 
-  @media (min-width: @desktop-width) {
-  font-size: 20px;
-  line-height: 32px;
-  }
-}
-
-.master__name {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-  margin: 0;
-
-  @media (min-width: @desktop-width) {
+.master__tab {
+  display: block;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 19px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @media(min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
+
+.master__tab:hover {
+  transform: scale(1.33);
+  transition: all 0.7s ease-out;
+}
+
+.master__tab:active {
+  opacity: 0.6;
+}
+
+.master__tab--prev {
+  padding: 0;
+  padding-left: 25px;
+  background: url('../img/icons/arrow-orange.svg') left center / 20% no-repeat;
+}
+
+.master__tab--next {
+  padding: 0;
+  padding-right: 25px;
+  background: url('../img/icons/arrow-black-orange.svg') right center / 20% no-repeat;
+}
+
+
+

@@ -1,3 +1,18 @@
+.form--bottom {
+  background-color: #f6f7f8;
+  max-width: 992px;
+
+  @media(min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 38px;
+    row-gap: 10px;
+    width: 100%;
+    margin: 0;
+  }
+}
+
 
 .form__border {
     border: none;
@@ -42,6 +57,7 @@
 
     @media(min-width: 481px) {
       max-width: 500px;
+      min-width: 318px;
     }
 
     @media(min-width: @desktop-width) {
@@ -56,6 +72,10 @@
   line-height: 20px;
   font-weight: 500;
   color: @color-text;
+
+  &--bottom {
+    background-color: #f6f7f8;
+  }
 }
 
 .form__import::placeholder {
@@ -65,6 +85,9 @@
   color: @color-text;
 }
 
+.form__range--bottom {
+  background-color: #f6f7f8;
+}
 
 input[type=range] {
   width: 100%;
@@ -73,6 +96,7 @@ input[type=range] {
 
   @media(min-width: 481px) {
     max-width: 500px;
+    min-width: 318px; 
   }
 
   @media(min-width: @desktop-width) {
@@ -132,17 +156,25 @@ input[type="range"]::-ms-fill-upper {
   margin-bottom: 20px;
 }
 
+
 .form__control {
   width: 100%;
   background-color: #ECF1F7;
   border-radius: 3px;
   border: none;
-  padding: 10px 14px;
+  padding: 16px 14px;
   outline: none;
   box-sizing: border-box;
 
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #8f8f8f;
+  font-family: "Golos", "Arial", sans-serif;
+
   @media(min-width: 481px) {
     max-width: 500px;
+    min-width: 318px; 
   }
 
   @media(min-width: @desktop-width) {
@@ -150,45 +182,47 @@ input[type="range"]::-ms-fill-upper {
   }
 }
 
-.type-remont-rooms {
-  width: 100%;
-  box-sizing: border-box;
-
-  option {
-    font-family: "Golos", "Arial", sans-serif;
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #9B9B9B;
-
-    &:hover {
-      background-color: rgba(255, 148, 71, 0.7);
-    }
-  }
-
-  @media(min-width: 481px) {
-    max-width: 500px;
-  }
-
-  @media(min-width: @desktop-width) {
-    max-width: 318px;
-  }
+.form__control option {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #8f8f8f;
+  font-family: "Golos", "Arial", sans-serif;
 }
+
 
 //Button
 
 .form__button {
   .btn(); 
   margin-bottom: 18px;
+  box-sizing: border-box;
 
   @media(min-width: 481px) {
-    max-width: 400px;
+    max-width: 500px;
+  }
+
+  @media(min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 
   @media(min-width: @desktop-width) {
-    margin-bottom: 0;
+    
     max-width: 318px;
   }
 
+  &--bottom {
+    @media(min-width: @tablet-width) {
+      max-width: 318px;
+    }
+  }
+}
 
+.form__text {
+  color: #9b9b9b;
+  margin: 0;
+
+  @media(min-width: @tablet-width) {
+    max-width: 318px;
+  } 
 }

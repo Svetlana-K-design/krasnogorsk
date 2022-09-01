@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between;
     border-radius: 14px;
+
+    &--bottom {
+      display: block;
+    }
   }
 }
 
@@ -30,6 +34,16 @@
   .title-h3();
   text-align: left;
   margin-bottom: 14px;
+
+  &--bottom {
+    .title-h2();
+    text-align: center;
+    margin-bottom: 24px;
+
+    @media(min-width: @desktop-width) {
+      margin-bottom: 41px;
+    }
+  }
 }
 
 .calculator__wrapper {

@@ -1,37 +1,77 @@
 $(document).ready(function() {
 	$('.portfolio__slider').slick({
-		prevArrow: $('.portfolio__tab--prev'), 
-		nextArrow: $('.portfolio__tab--next'),
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: true,  		
 		adaptiveHeight: true
 	});
 
-	$('.slider-for').slick({
+	$('.master__slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false,
-		dots: false,
-		fade: true,
-		asNavFor: '.slider-nav'
-	});
-	$('.slider-nav').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		asNavFor: '.slider-for',
-		arrows: false,
-		dots: false,
-		focusOnSelect: true,
-		initialSlide: 1
+		arrows: true,
+		dots: true,  		
+		adaptiveHeight: true
 	});
 
 	$('.reviews__slider').slick({
-		slidesToShow: 1,
+		infinite: true,
+		slidesToShow: 3,
 		slidesToScroll: 1,
-		arrows: true,  		
-		adaptiveHeight: true
+		arrows: true,
+		dots: true,    		
+		adaptiveHeight: true,
+		responsive: [ 	
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 1,
+			  }
+			}
+		]
 	});
 
 	$('.sale__slider').slick({
-		arrows: true
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: true,    		
+		adaptiveHeight: true,
+		responsive: [ 	
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 1,
+			  }
+			}
+		]
+	});
+
+	$('.documents__slider').slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: true,  
+		arrows: true,
+		dots: true,
+		responsive: [ 	
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 3,
+			  }
+			},
+		
+			{
+			  breakpoint: 481,
+			  settings: {
+				slidesToShow: 1,	
+			  }
+			}
+		
+			]
 	});
 
 //galery

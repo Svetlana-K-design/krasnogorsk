@@ -220,6 +220,16 @@
   background-color: transparent;
   display: block;
   margin: 0 auto;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.5);
+    transition: all 0.7s ease-out;
+  }
+
+  &:active  {
+    opacity: 0.6;
+  }
 
   @media(min-width: @tablet-width) {
     font-size: 20px;

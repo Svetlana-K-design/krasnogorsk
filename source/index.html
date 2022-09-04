@@ -24,9 +24,8 @@
                                 <p class="page-header__slogan">Ремонт квартир в Москве и МО</p>
                         </a>
                         <nav class="main-nav">
-                                <div class="main-nav__toggle-name">Меню<button
-                                                class="main-nav__toggle main-nav__toggle--closed"
-                                                aria-label="Открыть меню"><span
+                                <div class="main-nav__toggle-name">Меню
+                                        <button class="main-nav__toggle main-nav__toggle--closed" aria-label="Открыть меню"><span
                                                         class="main-nav__burger"></span></button></div>
                                 <ul class="main-nav__list site-list">
                                         <li class="site-list__item"><a class="site-list__link" href="#price">Цены</a>
@@ -1632,11 +1631,11 @@
                                                                 </datalist>
                                                         </fieldset>
                                                         <div class="form__wrapper form__wrapper--select">
-                                                                <select class="form__control form__control--select" id="type-remont-rooms" name="type-remont-rooms" >
+                                                                <select class="form__control form__control--select" id="type-remont-room" name="type-remont-room" >
                                                                         <option value="0" class="form__option-placeholder">
                                                                                 Вид ремонта
                                                                         </option>
-                                                                        <option class="tablinks"
+                                                                        <option class="tablinks" selected
                                                                                 data-type-remont-room="1"
                                                                                 value="Косметический">
                                                                                 Косметический
@@ -1653,14 +1652,14 @@
                                                                         </option>
                                                                 </select>
                                                         </div>
-                                                        <input class="form__button" type="submit"
+                                                        <input class="form__button form__button--white" type="submit"
                                                                 value="Узнать стоимость ремонта">
                                                 </form>
                                                 <a class="calculator__link" for="type-remont-room">Что включает в себя
                                                         ремонт?</a>
                                         </div>
                                         <div class="calculator__wrapper calculator__wrapper--grey">
-                                                <div class="calculator__remont-description tabcontent"
+                                                <div class="calculator__remont-description active tabcontent"
                                                         id="type-remont-room-1">
                                                         <h3 class="calculator__subtitle">Ремонт включает:</h3>
                                                         <ul class="calculator__remont-list">
@@ -1682,7 +1681,22 @@
 
                                                 <div class="calculator__remont-description tabcontent"
                                                         id="type-remont-room-2">
-
+                                                        <h3 class="calculator__subtitle">Ремонт включает:</h3>
+                                                        <ul class="calculator__remont-list">
+                                                                <li class="calculator__remont-item">Демонтаж старых
+                                                                        покрытий</li>
+                                                                <li class="calculator__remont-item">Шпаклевка стен</li>
+                                                                <li class="calculator__remont-item">Оклейка стен обоями
+                                                                </li>
+                                                                <li class="calculator__remont-item">Настил линолеума
+                                                                </li>
+                                                                <li class="calculator__remont-item">Замена розеток,
+                                                                        выключателей, светильников</li>
+                                                        </ul>
+                                                        <p class="calculator__total">Срок работы:<span> 19 дней</span>
+                                                        </p>
+                                                        <p class="calculator__total">Скидка на ремонт:<span> до
+                                                                        15%</span></p>
                                                 </div>
                                                 <div class="calculator__remont-description tabcontent"
                                                         id="type-remont-room-3">
@@ -1796,9 +1810,7 @@
                                                                 <li class="price__item">
                                                                         <h3 class="price__name">Евроремонт квартиры</h3>
                                                                         <p class="price__bold">от 6 850 ₽./м2</p>
-                                                                        <p class="price__text">входит: демонтаж существующих покрытий; стяжка пола; штукатурка стен; выравнивание
-                                                                                потолка; замена электрики; грунтовка пола, стен и потолка; шпаклевка стен и потолка; поклейка обоев;
-                                                                                окраска потолков; укладка паркетной доски; монтаж плинтусов; замена батарей; влажная уборка помещения
+                                                                        <p class="price__text">входит: демонтаж существующих покрытий; стяжка пола; штукатурка стен; выравнивание потолка; замена электрики; грунтовка пола, стен и потолка; шпаклевка стен и потолка; поклейка обоев; окраска потолков; укладка паркетной доски; монтаж плинтусов; замена батарей; влажная уборка помещения
                                                                         </p>
                                                                 </li>
                                                         </ul>
@@ -1851,8 +1863,7 @@
                                                                         <p class="price__bold price__bold--add">330 ₽./м2</p>
                                                                 </li>
                                                         </ul>
-                                                        <button class="price__button" type="button">Посмотреть полный прайс
-                                                                лист</button>
+                                                        <a href="#pricelist" class="popup price__button" itemprop="url">Посмотреть полный прайс</a>
                                                 </div>
                                         </div>
                                 </div>
@@ -2465,35 +2476,65 @@
                                                 <div class="master__flex">
                                                         <div class="master__photo">
                                                                 <picture>
+                                                                        <source type="image/webp" srcset="img/master/mastera-studii-remontov-1.webp" />
+                                                                        <img alt="Фото мастера Студии ремонтов Евгения Орехова"
+                                                                                src="img/master/mastera-studii-remontov-1.jpg" class="master__img" />
+                                                                </picture>
+                                                        </div>
+                                                        <div class="master__desc">
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle master__subtitle--name">Мастер по ремонту квартир</h3>
+                                                                        <p class="master__text master__text--name">Евгений Орехов</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Направление</h3>
+                                                                        <p class="master__text">Маляр, штукатур, гипсокартонщик</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Навыки</h3>
+                                                                        <p class="master__text">Выполнение работ по следующим направлениям: штукатурка, поклейка
+                                                                                обоев, покраска, монтаж гипсокартонных конструкций, стяжка полов</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Опыт</h3>
+                                                                        <p class="master__text">В компании 3 года</p>
+                                                                </div>
+                                                                <blockquote class="master__say">«Многолетний опыт - залог высокого качества наших работ»
+                                                                </blockquote>
+                                                        </div>
+                                                </div>
+                                        
+                                        </div>
+
+                                        <div class="master__slide slider__item">
+                                                <div class="master__flex">
+                                                        <div class="master__photo">
+                                                                <picture>
                                                                         <source type="image/webp"
-                                                                                srcset="img/master/mastera-studii-remontov-2.webp" />
-                                                                        <img alt="Фото мастера Студии ремонтов Александр Васильев"
-                                                                                src="img/master/mastera-studii-remontov-2.jpg"
+                                                                                srcset="img/master/mastera-studii-remontov-3.webp" />
+                                                                        <img alt="Фото мастера Студии ремонтов Владимира Никитина"
+                                                                                src="img/master/mastera-studii-remontov-3.jpg"
                                                                                 class="master__img" />
                                                                 </picture>
                                                         </div>
                                                         <div class="master__desc">
                                                                 <div class="master__list">
-                                                                        <h3 class="master__subtitle master__subtitle--name">Мастер отделочных работ</h3>
-                                                                        <p class="master__text master__text--name">Александр Васильев</p>
+                                                                        <h3 class="master__subtitle master__subtitle--name">Плиточник-сантехник</h3>
+                                                                        <p class="master__text master__text--name">Владимир Никитин</p>
                                                                 </div>
                                                                 <div class="master__list">
                                                                         <h3 class="master__subtitle">Направление</h3>
-                                                                        <p class="master__text">Плиточник-гипсокартонщик</p>
+                                                                        <p class="master__text">Плиточник-облицовщик</p>
                                                                 </div>
                                                                 <div class="master__list">
                                                                         <h3 class="master__subtitle">Навыки</h3>
-                                                                        <p class="master__text">Монтаж гипсокартона, грунтовка и
-                                                                                шпаклёвка гипсокартона, окраска, кладка кафельной
-                                                                                плитки, прочие работы</p>
+                                                                        <p class="master__text">Мастер штукатурки стен по маякам и укладки керамической плитки и мозаики</p>
                                                                 </div>
                                                                 <div class="master__list">
                                                                         <h3 class="master__subtitle">Опыт</h3>
-                                                                        <p class="master__text">В компании 5 лет</p>
+                                                                        <p class="master__text">В компании 2 года</p>
                                                                 </div>
-                                                                <blockquote class="master__say">«Меня всегда привлекало все новое, люблю
-                                                                        экспериментировать и часто предлагаю заказчикам свежие
-                                                                        творческие идеи»</blockquote>
+                                                                <blockquote class="master__say">«Доверьте ремонт квартиры Нам! Результат не разочарует»</blockquote>
                                                         </div>
                                                 </div>
                 
@@ -2504,34 +2545,166 @@
                                                         <div class="master__photo">
                                                                 <picture>
                                                                         <source type="image/webp"
-                                                                                srcset="img/master/mastera-studii-remontov-2.webp" />
-                                                                        <img alt="Фото мастера Студии ремонтов Александр Васильев"
-                                                                                src="img/master/mastera-studii-remontov-2.jpg"
+                                                                                srcset="img/master/mastera-studii-remontov-4.webp" />
+                                                                        <img alt="Фото мастера Студии ремонтов Глеба Бабенко"
+                                                                                src="img/master/mastera-studii-remontov-4.jpg"
                                                                                 class="master__img" />
                                                                 </picture>
                                                         </div>
                                                         <div class="master__desc">
                                                                 <div class="master__list">
-                                                                        <h3 class="master__subtitle master__subtitle--name">Мастер отделочных работ</h3>
-                                                                        <p class="master__text master__text--name">Александр Васильев</p>
+                                                                        <h3 class="master__subtitle master__subtitle--name">Сантехник широкого профиля</h3>
+                                                                        <p class="master__text master__text--name">Глеб  Бабенко</p>
                                                                 </div>
                                                                 <div class="master__list">
                                                                         <h3 class="master__subtitle">Направление</h3>
-                                                                        <p class="master__text">Плиточник-гипсокартонщик</p>
+                                                                        <p class="master__text">Плиточник-сантехник</p>
                                                                 </div>
                                                                 <div class="master__list">
                                                                         <h3 class="master__subtitle">Навыки</h3>
-                                                                        <p class="master__text">Монтаж гипсокартона, грунтовка и
-                                                                                шпаклёвка гипсокартона, окраска, кладка кафельной
-                                                                                плитки, прочие работы</p>
+                                                                        <p class="master__text">Демонтаж и монтаж систем водоснабжения, канализации и отопления, установка сантехнических приборов</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Опыт</h3>
+                                                                        <p class="master__text">В компании 3 года</p>
+                                                                </div>
+                                                                <blockquote class="master__say">«Поможем реализовать любую вашу идею. Чем сложнее тем интереснее!»</blockquote>
+                                                        </div>
+                                                </div>
+                
+                                        </div>
+
+                                        <div class="master__slide slider__item">
+                                                <div class="master__flex">
+                                                        <div class="master__photo">
+                                                                <picture>
+                                                                        <source type="image/webp"
+                                                                                srcset="img/master/mastera-studii-remontov-5.webp" />
+                                                                        <img alt="Фото мастера Студии ремонтов Марии Ивановой"
+                                                                                src="img/master/mastera-studii-remontov-5.jpg"
+                                                                                class="master__img" />
+                                                                </picture>
+                                                        </div>
+                                                        <div class="master__desc">
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle master__subtitle--name">Маляр-штукатур</h3>
+                                                                        <p class="master__text master__text--name">Мария Иванова</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Направление</h3>
+                                                                        <p class="master__text">Мастер широкого профиля</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Навыки</h3>
+                                                                        <p class="master__text">Штукатурка поверхностей по маякам, шпаклевка под обои и окраску, оклейка стен обоями, окраска стен, работа с декоративной краской и штукатуркой</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Опыт</h3>
+                                                                        <p class="master__text">В компании 4 года</p>
+                                                                </div>
+                                                                <blockquote class="master__say">«Качество и сроки электромонтажных работ напрямую зависят от навыков специалиста. У нас с этим порядок!»</blockquote>
+                                                        </div>
+                                                </div>
+                
+                                        </div>
+
+                                        <div class="master__slide slider__item">
+                                                <div class="master__flex">
+                                                        <div class="master__photo">
+                                                                <picture>
+                                                                        <source type="image/webp"
+                                                                                srcset="img/master/mastera-studii-remontov-6.webp" />
+                                                                        <img alt="Фото мастера Студии ремонтов Ростислава Носова"
+                                                                                src="img/master/mastera-studii-remontov-6.jpg"
+                                                                                class="master__img" />
+                                                                </picture>
+                                                        </div>
+                                                        <div class="master__desc">
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle master__subtitle--name">Электромонтер</h3>
+                                                                        <p class="master__text master__text--name">Ростислав Носов</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Направление</h3>
+                                                                        <p class="master__text">Электрик</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Навыки</h3>
+                                                                        <p class="master__text">Разводка электрики со штроблением, установка автоматов и УЗО, установка розеток и выключателей</p>
                                                                 </div>
                                                                 <div class="master__list">
                                                                         <h3 class="master__subtitle">Опыт</h3>
                                                                         <p class="master__text">В компании 5 лет</p>
                                                                 </div>
-                                                                <blockquote class="master__say">«Меня всегда привлекало все новое, люблю
-                                                                        экспериментировать и часто предлагаю заказчикам свежие
-                                                                        творческие идеи»</blockquote>
+                                                                <blockquote class="master__say">«С безопасностью шутить нельзя. Доверьте электромонтаж опытным  мастерам»</blockquote>
+                                                        </div>
+                                                </div>
+                
+                                        </div>
+
+                                        <div class="master__slide slider__item">
+                                                <div class="master__flex">
+                                                        <div class="master__photo">
+                                                                <picture>
+                                                                        <source type="image/webp"
+                                                                                srcset="img/master/mastera-studii-remontov-7.webp" />
+                                                                        <img alt="Фото мастера Студии ремонтов Анатолия Аверина"
+                                                                                src="img/master/mastera-studii-remontov-7.jpg"
+                                                                                class="master__img" />
+                                                                </picture>
+                                                        </div>
+                                                        <div class="master__desc">
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle master__subtitle--name">Электрик</h3>
+                                                                        <p class="master__text master__text--name">Анатолий Аверин</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Направление</h3>
+                                                                        <p class="master__text">Электрик-универсал</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Навыки</h3>
+                                                                        <p class="master__text">Ремонт, обслуживание, монтаж электрических приборов, сборка электрических элементов</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Опыт</h3>
+                                                                        <p class="master__text">В компании 5 лет</p>
+                                                                </div>
+                                                                <blockquote class="master__say">«Наш главный приоритет - это качество и долговечность вашего ремонта»</blockquote>
+                                                        </div>
+                                                </div>
+                
+                                        </div>
+
+                                        <div class="master__slide slider__item">
+                                                <div class="master__flex">
+                                                        <div class="master__photo">
+                                                                <picture>
+                                                                        <source type="image/webp"
+                                                                                srcset="img/master/mastera-studii-remontov-8.webp" />
+                                                                        <img alt="Фото мастера Студии ремонтов Владимира Никитина"
+                                                                                src="img/master/mastera-studii-remontov-8.jpg"
+                                                                                class="master__img" />
+                                                                </picture>
+                                                        </div>
+                                                        <div class="master__desc">
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle master__subtitle--name">Мастер отделочных декоративных работ</h3>
+                                                                        <p class="master__text master__text--name">Никита Абрамов</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Направление</h3>
+                                                                        <p class="master__text">Гипсокартонщик-штукатур</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Навыки</h3>
+                                                                        <p class="master__text">Монтаж гипсокартонных конструкций, в том числе декоративных (ниша, арка, колонна, двухуровневый потолок) последующая шпаклёвка и покраска.</p>
+                                                                </div>
+                                                                <div class="master__list">
+                                                                        <h3 class="master__subtitle">Опыт</h3>
+                                                                        <p class="master__text">В компании 2 года</p>
+                                                                </div>
+                                                                <blockquote class="master__say">«Правильно оформленный декор может полностью изменить внешний вид квартиры»</blockquote>
                                                         </div>
                                                 </div>
                 
@@ -2643,7 +2816,7 @@
                                         <div class="form__wrapper">
                                                 <input class="form__control" type="tel" id="phone" name="phone" pattern="\+7\[0-9]{3}\s?\[0-9]{3}\s?\[0-9]{2}\s?\[0-9]{2}" required placeholder="+7 ___ ___-__-__">
                                          </div>
-                                        <input class="form__button form__button--bottom" type="submit"
+                                        <input class="form__button form__button--bottom popup" type="submit"
                                                 value="Узнать стоимость ремонта">
                                         <p class="form__text">*Оставляя заявку Вы даете согласие на обработку своих персональных данных. Ваши данные не будут переданы 3м лицам.</p>
                                 </form>
@@ -2682,10 +2855,10 @@
                         </div>
                 </section>
                 <section id="reviews" class="reviews">
-                        <div class="reviews__container container container--50tb">
+                        <div class="reviews__container container container--max-width container--50tb">
                                 <h2 class="reviews__title">Отзывы клиентов о работе</h2>
                                 <div class="reviews__slider slider__list">
-                                        <div class="reviews__slide slider__item">
+                                        <div class="reviews__slide slider__item slider__item--max-width">
                                                 <div class="reviews__content">
                                                         <div class="reviews__person">
                                                                 <figure>
@@ -2722,7 +2895,36 @@
                                                 </div>
                                         </div>
 
-                                        <div class="reviews__slide slider__item">
+                                        <div class="reviews__slide slider__item slider__item--max-width">
+                                                <div class="reviews__content">
+                                                        <div class="reviews__person">
+                                                                <figure>
+                                                                        <picture>
+                                                                                <source type="image/webp" srcset="img/review/evgenij-plotnikov.webp" />
+                                                                                <img class="reviews__photo" src="img/review/evgenij-plotnikov.jpg"
+                                                                                        alt="Фотография Евгения Плотникова" title="Фото автора отзыва" />
+                                                                        </picture>
+                                                                        <figcaption>Евгений Плотников</figcaption>
+                                                                </figure>
+                                                        </div>
+                                                        <div class="reviews__say">
+                                                                <p class="reviews__text">Несколько месяцев назад делал ремонт своей двушки в компании Студия
+                                                                        Ремонтов, остался доволен, ремонт красивый! Заказал капитальный ремонт, очень надеялся,
+                                                                        что не прогадал с компанией. Отдельное спасибо прорабу Александру за помощь в подборе
+                                                                        материалов, теперь немного в этом разбираюсь. Подсказал, на чем можно сэкономить и
+                                                                        наоборот, где лучше потратить чуть больше денег, но зато ремонт будет долговечнее. Еще
+                                                                        мне не пришлось целый день ходить по строительным магазинам, материалы выбирали через
+                                                                        интернет, фирма потом сама всё доставила, так я сэкономил время и силы. Когда закончился
+                                                                        ремонт в кухне и ванной понял, что работы сделаны хорошо и все переживания прошли. Из
+                                                                        минусов, в конце увидел погрешность, но рабочие сразу исправили ее без разговоров. В
+                                                                        итоге моя двушка выглядела отлично, спасибо Студии Ремонтов!</p>
+                                        
+                                                                <a class="reviews__link-blue">Читать отзыв полностью</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="reviews__slide slider__item slider__item--max-width">
                                                 <div class="reviews__content">
                                                         <div class="reviews__person">
                                                                 <figure>
@@ -2759,7 +2961,81 @@
                                                 </div>
                                         </div>
 
-                                        <div class="reviews__slide slider__item">
+                                        <div class="reviews__slide slider__item slider__item--max-width">
+                                                <div class="reviews__content">
+                                                        <div class="reviews__person">
+                                                                <figure>
+                                                                        <picture>
+                                                                                <source type="image/webp"
+                                                                                        srcset="img/review/alla-bondareva.webp" />
+                                                                                <img class="reviews__photo"
+                                                                                        src="img/review/alla-bondareva.jpg"
+                                                                                        alt="Фотография Аллы Бондаревой"
+                                                                                        title="Фото автора отзыва" />
+                                                                        </picture>
+                                                                        <figcaption>Алла Бондарева</figcaption>
+                                                                </figure>
+                                                        </div>
+                                                        <div class="reviews__say">
+                                                                <p class="reviews__text">Приобрели с мужем трехкомнатную квартиру 66м2,
+                                                                        она требовала серьезного ремонта, поэтому решили обратиться к
+                                                                        фирме-профессионалу. Знакомые нам посоветовали Студию Ремонтов,
+                                                                        обратили внимание на выполнение сроков и хорошие цены. Мы нашли
+                                                                        ее сайт в интернете, хорошенько его изучили и в конце концов
+                                                                        созвонились со Студией.</p>
+                                                                <p class="reviews__text">У нас было свое представление квартиры после
+                                                                        ремонта, которое рассказали прорабу, а потом получили от него
+                                                                        советы. После ремонта квартира выглядела как мы и хотели,
+                                                                        рабочие оказались ребята хорошие и сделали ремонт на совесть.
+                                                                        Особенно рады, что ремонт не затянулся, компания уложилась в
+                                                                        срок и стоимость к счастью не увеличилась) Очень приятно, что
+                                                                        рабочие после работ убрались и квартиру оставили чистой. В итоге
+                                                                        осталось очень хорошее впечатление от ремонта в целом и от
+                                                                        работников Студии Ремонтов, всем советую.</p>
+                                                                
+                                                                <a class="reviews__link-blue">Читать отзыв полностью</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="reviews__slide slider__item slider__item--max-width">
+                                                <div class="reviews__content">
+                                                        <div class="reviews__person">
+                                                                <figure>
+                                                                        <picture>
+                                                                                <source type="image/webp"
+                                                                                        srcset="img/review/alla-bondareva.webp" />
+                                                                                <img class="reviews__photo"
+                                                                                        src="img/review/alla-bondareva.jpg"
+                                                                                        alt="Фотография Аллы Бондаревой"
+                                                                                        title="Фото автора отзыва" />
+                                                                        </picture>
+                                                                        <figcaption>Алла Бондарева</figcaption>
+                                                                </figure>
+                                                        </div>
+                                                        <div class="reviews__say">
+                                                                <p class="reviews__text">Приобрели с мужем трехкомнатную квартиру 66м2,
+                                                                        она требовала серьезного ремонта, поэтому решили обратиться к
+                                                                        фирме-профессионалу. Знакомые нам посоветовали Студию Ремонтов,
+                                                                        обратили внимание на выполнение сроков и хорошие цены. Мы нашли
+                                                                        ее сайт в интернете, хорошенько его изучили и в конце концов
+                                                                        созвонились со Студией.</p>
+                                                                <p class="reviews__text">У нас было свое представление квартиры после
+                                                                        ремонта, которое рассказали прорабу, а потом получили от него
+                                                                        советы. После ремонта квартира выглядела как мы и хотели,
+                                                                        рабочие оказались ребята хорошие и сделали ремонт на совесть.
+                                                                        Особенно рады, что ремонт не затянулся, компания уложилась в
+                                                                        срок и стоимость к счастью не увеличилась) Очень приятно, что
+                                                                        рабочие после работ убрались и квартиру оставили чистой. В итоге
+                                                                        осталось очень хорошее впечатление от ремонта в целом и от
+                                                                        работников Студии Ремонтов, всем советую.</p>
+                                                                
+                                                                <a class="reviews__link-blue">Читать отзыв полностью</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="reviews__slide slider__item  slider__item--max-width">
                                                 <div class="reviews__content">
                                                         <div class="reviews__person">
                                                                 <figure>
@@ -2800,10 +3076,10 @@
                         </div>
                 </section>
                 <section class="sale">
-                        <div class="sale__container container container--50tb">
+                        <div class="sale__container container container--max-width container--50tb">
                             <h2 class="sale__title">Акции и скидки</h2>
                             <div class="sale__slider slider__list">
-                                <div class="sale__slide slider__item">
+                                <div class="sale__slide slider__item slider__item--max-width">
                                         <div class="sale__content">
                                                 <h3 class="sale__subtitle">Акция «Расскажи о нас»</h3>
                                                 <p class="sale__text-bold">Оставьте правдивый отзыв</p>
@@ -2811,25 +3087,24 @@
                                         </div>
                                 </div>
 
-                                <div class="sale__slide slider__item">
+                                <div class="sale__slide slider__item slider__item--max-width">
                                         <div class="sale__content">
-                                                <h3 class="sale__subtitle">Акция «Расскажи о нас»</h3>
-                                                <p class="sale__text-bold">Оставьте правдивый отзыв</p>
-                                                <p class="sale__text">в интернете о работе нашей компании с фотографиями Вашего ремонта и получите скидку 5%. О своем желании поучаствовать в акции «Расскажи о нас» необходимо сообщить замерщику до заключения договора.</p>
+                                                <h3 class="sale__subtitle">Акция «Скидки инвалидам»</h3>
+                                                <p class="sale__text">Клиентам с инвалидностью предоставляем  <span>скидку 10%</span> 
+                                                        на все ремонтные работы.</p>
                                         </div>
                                 </div>
 
-                                <div class="sale__slide slider__item">
+                                <div class="sale__slide slider__item slider__item--max-width">
                                         <div class="sale__content">
-                                                <h3 class="sale__subtitle">Акция «Расскажи о нас»</h3>
-                                                <p class="sale__text-bold">Оставьте правдивый отзыв</p>
-                                                <p class="sale__text">в интернете о работе нашей компании с фотографиями Вашего ремонта и получите скидку 5%. О своем желании поучаствовать в акции «Расскажи о нас» необходимо сообщить замерщику до заключения договора.</p>
+                                                <h3 class="sale__subtitle">Акция «Подарите ремонт близким»</h3>
+                                                <p class="sale__text">Приобретите подарочный сертификат на ремонт со
+                                                        <span>скидкой 10%</span> номиналом, 50, 100, 200, 300 или 500 тысяч рублей.</p>
                                         </div>
                                 </div>
-
                             </div>
-                            <a class="sale__link-orange">Участвовать в акции и получить скидку</a>
-                            <a class="sale__link-blue">Участвовать</a>
+                            <a class="sale__link-orange popup" href="#popupDiscount">Участвовать в акции и получить скидку</a>
+                            <a class="sale__link-blue  popup" href="#popupDiscount">Участвовать</a>
                         </div>
                 </section>
                 <section id="documents" class="documents">
@@ -2842,16 +3117,16 @@
                                                         <figure>
                                                                 <picture>
                                                                         <source type="image/webp" media="(min-width: 768px)"
-                                                                                srcset="img/other/inn-studiya-remontov-big.webp" />
+                                                                                srcset="img/other/studiya-remontov-ogrn-big.webp" />
                                                                         <source type="image/webp"
-                                                                                srcset="img/other/inn-studiya-remontov.webp" />
+                                                                                srcset="img/other/studiya-remontov-ogrn.webp" />
                                                                         <source media="(min-width: 768px)"
-                                                                                srcset="img/other/inn-studiya-remontov-big.jpg" />
-                                                                        <img class="documents__photo" src="img/other/inn-studiya-remontov.jpg"
-                                                                                alt="Свидетельство ИНН компании Стидия ремонтов"
+                                                                                srcset="img/other/studiya-remontov-ogrn-big.jpg" />
+                                                                        <img class="documents__photo" src="img/other/studiya-remontov-ogrn.jpg"
+                                                                                alt="Свидетельство ОГРН компании Стидия ремонтов"
                                                                                 title="Скан документа" />
                                                                 </picture>
-                                                                <figcaption class="documents__caption">Свидетельство ИНН</figcaption>
+                                                                <figcaption class="documents__caption">ОГРН компании</figcaption>
                                                         </figure>
                                                 </div>
                 
@@ -2882,16 +3157,56 @@
                                                         <figure>
                                                                 <picture>
                                                                         <source type="image/webp" media="(min-width: 768px)"
-                                                                                srcset="img/other/inn-studiya-remontov-big.webp" />
+                                                                                srcset="img/other/sro-studiya-remontov-big.webp" />
                                                                         <source type="image/webp"
-                                                                                srcset="img/other/inn-studiya-remontov.webp" />
+                                                                                srcset="img/other/sro-studiya-remontov.webp" />
                                                                         <source media="(min-width: 768px)"
-                                                                                srcset="img/other/inn-studiya-remontov-big.jpg" />
-                                                                        <img class="documents__photo" src="img/other/inn-studiya-remontov.jpg"
-                                                                                alt="Свидетельство ИНН компании Стидия ремонтов"
+                                                                                srcset="img/other/sro-studiya-remontov-big.jpg" />
+                                                                        <img class="documents__photo" src="img/other/sro-studiya-remontov.jpg"
+                                                                                alt="Допуск СРО компании Стидия ремонтов"
                                                                                 title="Скан документа" />
                                                                 </picture>
-                                                                <figcaption class="documents__caption">Свидетельство ИНН</figcaption>
+                                                                <figcaption class="documents__caption">Допуск СРО</figcaption>
+                                                        </figure>
+                                                </div>
+                
+                                        </div>
+
+                                        <div class="documents__slide slider__item">
+                                                <div class="documents__content">
+                                                        <figure>
+                                                                <picture>
+                                                                        <source type="image/webp" media="(min-width: 768px)"
+                                                                                srcset="img/other/iso9001-studiya-remontov-big.webp" />
+                                                                        <source type="image/webp"
+                                                                                srcset="img/other/iso9001-studiya-remontov.webp" />
+                                                                        <source media="(min-width: 768px)"
+                                                                                srcset="img/other/iso9001-studiya-remontov-big.jpg" />
+                                                                        <img class="documents__photo" src="img/other/iso9001-studiya-remontov.jpg"
+                                                                                alt="Сертификат соответствия ИСО компании Стидия ремонтов"
+                                                                                title="Скан документа" />
+                                                                </picture>
+                                                                <figcaption class="documents__caption">Сертификат соответствия ИСО 9001</figcaption>
+                                                        </figure>
+                                                </div>
+                
+                                        </div>
+
+                                        <div class="documents__slide slider__item">
+                                                <div class="documents__content">
+                                                        <figure>
+                                                                <picture>
+                                                                        <source type="image/webp" media="(min-width: 768px)"
+                                                                                srcset="img/other/certificate-studiya-remontov-big.webp" />
+                                                                        <source type="image/webp"
+                                                                                srcset="img/other/certificate-studiya-remontov-big.webp" />
+                                                                        <source media="(min-width: 768px)"
+                                                                                srcset="img/other/certificate-studiya-remontov-big.jpg" />
+                                                                        <img class="documents__photo" src="img/other/certificate-studiya-remontov-big.jpg"
+                                                                                alt="Сертификат соответствия ГОСТ компании Стидия ремонтов"
+                                                                                title="Скан документа" />
+                                                                </picture>
+                                                                <figcaption class="documents__caption">Сертификат соответствия ГОСТ Р</figcaption>
                                                         </figure>
                                                 </div>
                 
@@ -2962,7 +3277,7 @@
                                                                                 трудоустройства</p>
                                                                 </div>
                                                         </div>
-                                                        <a href="#zvonok1" class="contacts__button btn popup">Обратный
+                                                        <a href="#zvonok" class="contacts__button btn popup">Обратный
                                                                 звонок</a>
                                                 </div>
                                                 <div class="contacts__tab" id="tab-3">
@@ -3161,6 +3476,566 @@
                         </div>
                 </div>
         </footer>
+        <div id="pricelist" class="popup__price mfp-hide">
+                  <table class="popup__price-table">
+                    <caption>Полный прайс лист на&nbsp;услуги</caption>
+                    <tr class="popup__orange-bg">
+                      <td></td>
+                      <td>Демонтажные работы</td>
+                      <td>Ед. измер.</td>
+                      <td>Цена*</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Демонтаж плинтуса</td>
+                      <td>м/п</td>
+                      <td>58</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Демонтаж ламината, паркетной доски</td>
+                      <td>м2</td>
+                      <td>80</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Демонтаж фанеры, ДВП</td>
+                      <td>м2</td>
+                      <td>69</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Демонтаж деревянных полов</td>
+                      <td>м2</td>
+                      <td>178</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Демонтаж лаг</td>
+                      <td>м2</td>
+                      <td>91</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Демонтаж стяжки до 3 см </td>
+                      <td>м2</td>
+                      <td>281</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Снятие обоев</td>
+                      <td>м2</td>
+                      <td>71</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Снятие побелки</td>
+                      <td>м2</td>
+                      <td>138</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Очистка краски со стен</td>
+                      <td>м2</td>
+                      <td>138</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Очистка стен от шпаклевки</td>
+                      <td>м2</td>
+                      <td>138</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Ошкуривание поверхности</td>
+                      <td>м2</td>
+                      <td>100</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Отбивка штукатурки со стен</td>
+                      <td>м2</td>
+                      <td>223</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Демонтаж стен (перегородок) из кирпича</td>
+                      <td>м2</td>
+                      <td>566</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Демонтаж стен из ацеида, гипсолита, ГКЛ</td>
+                      <td>м2</td>
+                      <td>338</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Демонтаж натяжного потолка</td>
+                      <td>м2</td>
+                      <td>69</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Демонтаж подвесных потолков ГКЛ</td>
+                      <td>м2</td>
+                      <td>166</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Очистка побелки</td>
+                      <td>м2</td>
+                      <td>183</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Очистка краски ВЭ</td>
+                      <td>м2</td>
+                      <td>149</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Снятие обоев</td>
+                      <td>м2</td>
+                      <td>71</td>
+                    </tr>
+                    <tr>
+                      <td>двери</td>
+                      <td>Демонтаж деревянной двери</td>
+                      <td>м2</td>
+                      <td>366</td>
+                    </tr>
+                    <tr>
+                      <td>окна</td>
+                      <td>Демонтаж оконного блока</td>
+                      <td>м2</td>
+                      <td>452</td>
+                    </tr>
+                    <tr>
+                      <td>окна</td>
+                      <td>Демонтаж подоконников</td>
+                      <td>м/п</td>
+                      <td>263</td>
+                    </tr>
+                    <tr>
+                      <td>прочие</td>
+                      <td>Демонтаж вент решеток</td>
+                      <td>шт</td>
+                      <td>69</td>
+                    </tr>
+                    <tr>
+                      <td>прочие</td>
+                      <td>Демонтаж воздуховодов</td>
+                      <td>м</td>
+                      <td>138</td>
+                    </tr>
+                    <tr>
+                      <td>прочие</td>
+                      <td>Очистка радиатора от краски </td>
+                      <td>шт</td>
+                      <td>1 133</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж смесителя</td>
+                      <td>шт</td>
+                      <td>279</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж душевой кабины</td>
+                      <td>шт</td>
+                      <td>749</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж ванны</td>
+                      <td>шт</td>
+                      <td>869</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж раковины</td>
+                      <td>шт</td>
+                      <td>434</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж унитаза</td>
+                      <td>шт</td>
+                      <td>566</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж полотенцесушителя</td>
+                      <td>шт</td>
+                      <td>543</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж труб в/с</td>
+                      <td>м/п</td>
+                      <td>208</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Демонтаж труб канализации</td>
+                      <td>м/п</td>
+                      <td>263</td>
+                    </tr>
+                    <tr class="popup__orange-bg">
+                      <td></td>
+                      <td>Электрика</td>
+                      <td>Ед. измер.</td>
+                      <td>Цена*</td>
+                    </tr>
+                    <tr>
+                      <td>электрика</td>
+                      <td>Демонтаж розеток и выключателей</td>
+                      <td>шт</td>
+                      <td>98</td>
+                    </tr>
+                    <tr>
+                      <td>электрика</td>
+                      <td>Демонта люстры</td>
+                      <td>шт</td>
+                      <td>246</td>
+                    </tr>
+                    <tr>
+                      <td>электрика</td>
+                      <td>Демонтаж электрокабеля</td>
+                      <td>м</td>
+                      <td>23</td>
+                    </tr>
+                    <tr class="popup__orange-bg">
+                      <td></td>
+                      <td>Черновые отделочные работы</td>
+                      <td>Ед. измер.</td>
+                      <td>Цена*</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Грунтовка пола </td>
+                      <td>м2</td>
+                      <td>52</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Устройство наливных полов</td>
+                      <td>м2</td>
+                      <td>304</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Устройство стяжки по маякам </td>
+                      <td>м2</td>
+                      <td>434</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Устройство тепло/звукоизоляции</td>
+                      <td>м2</td>
+                      <td>160</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Укладка фанеры</td>
+                      <td>м2</td>
+                      <td>270</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Штукатурка стен по маякам гипсовой смесью</td>
+                      <td>м2</td>
+                      <td>511</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Штукатурка стен (под правило)</td>
+                      <td>м2</td>
+                      <td>396</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Грунтовка стен</td>
+                      <td>м2</td>
+                      <td>52</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Шпатлевка стен под оклейку обоями (с ошкуриванием)</td>
+                      <td>м2</td>
+                      <td>331</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Устройство перегородок из ГКЛ</td>
+                      <td>м2</td>
+                      <td>652</td>
+                    </tr>
+                    <tr>
+                      <td>откосы</td>
+                      <td>Грунтовка откосов, углов</td>
+                      <td>м/п</td>
+                      <td>50</td>
+                    </tr>
+                    <tr>
+                      <td>откосы</td>
+                      <td>Штукатурка откосов</td>
+                      <td>м/п</td>
+                      <td>350</td>
+                    </tr>
+                    <tr>
+                      <td>откосы</td>
+                      <td>Утепление откосов</td>
+                      <td>м/п</td>
+                      <td>98</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Штукатурка потолка по маякам</td>
+                      <td>м2</td>
+                      <td>592</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Грунтовка потолков</td>
+                      <td>м2</td>
+                      <td>73</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Шпатлевка потолков под покраску</td>
+                      <td>м2</td>
+                      <td>565</td>
+                    </tr>
+                    <tr class="popup__orange-bg">
+                      <td></td>
+                      <td>Чистовые отделочные работы</td>
+                      <td>Ед. измер.</td>
+                      <td>Цена*</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Укладка ламината</td>
+                      <td>м2</td>
+                      <td>378</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Укладка паркетной доски</td>
+                      <td>м2</td>
+                      <td>459</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Настил линолеума бытового, ковролина</td>
+                      <td>м2</td>
+                      <td>258</td>
+                    </tr>
+                    <tr>
+                      <td>полы</td>
+                      <td>Монтаж плинтусов</td>
+                      <td>м/п</td>
+                      <td>143</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Оклейка стен обоями</td>
+                      <td>м2</td>
+                      <td>290</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Облицовка плиткой стен</td>
+                      <td>м2</td>
+                      <td>876</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Облицовка стен ПВХ панелями (свыше 10м2)</td>
+                      <td>м2</td>
+                      <td>515</td>
+                    </tr>
+                    <tr>
+                      <td>стены</td>
+                      <td>Окраска стен в 2 слоя</td>
+                      <td>м2</td>
+                      <td>223</td>
+                    </tr>
+                    <tr>
+                      <td>откосы</td>
+                      <td>Окраска откосов, углов</td>
+                      <td>м/п</td>
+                      <td>173</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Окраска потолков</td>
+                      <td>м2</td>
+                      <td>258</td>
+                    </tr>
+                    <tr>
+                      <td>потолки</td>
+                      <td>Устройство натяжных потолков</td>
+                      <td>м2</td>
+                      <td>330</td>
+                    </tr>
+                    <tr>
+                      <td>двери</td>
+                      <td>Установка двери деревянной</td>
+                      <td>шт</td>
+                      <td>3850</td>
+                    </tr>
+                    <tr>
+                      <td>двери</td>
+                      <td>Установка двери металлической</td>
+                      <td>шт</td>
+                      <td>5940</td>
+                    </tr>
+                    <tr>
+                      <td>окна</td>
+                      <td>Окраска окна</td>
+                      <td>м2</td>
+                      <td>572</td>
+                    </tr>
+                    <tr>
+                      <td>окна</td>
+                      <td>Установка подоконников</td>
+                      <td>м/п</td>
+                      <td>686</td>
+                    </tr>
+                    <tr>
+                      <td>электрика</td>
+                      <td>Установка розеток</td>
+                      <td>шт</td>
+                      <td>258</td>
+                    </tr>
+                    <tr>
+                      <td>электрика</td>
+                      <td>Прокладка кабеля</td>
+                      <td>м/п</td>
+                      <td>66</td>
+                    </tr>
+                    <tr>
+                      <td>электрика</td>
+                      <td>Установка люстры</td>
+                      <td>шт</td>
+                      <td>824</td>
+                    </tr>
+                    <tr>
+                      <td>электрика</td>
+                      <td>Установка звонка</td>
+                      <td>шт</td>
+                      <td>361</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Установка ванны</td>
+                      <td>шт</td>
+                      <td>3587</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Установка раковины</td>
+                      <td>шт</td>
+                      <td>1304</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Установка унитаза</td>
+                      <td>шт</td>
+                      <td>2174</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Установка душа</td>
+                      <td>шт</td>
+                      <td>626</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Прокладка труб водоснабжения</td>
+                      <td>м/п</td>
+                      <td>326</td>
+                    </tr>
+                    <tr>
+                      <td>сантехника</td>
+                      <td>Прокладка труб канализации</td>
+                      <td>м/п</td>
+                      <td>486</td>
+                    </tr>
+                    <tr class="popup__orange-bg">
+                      <td></td>
+                      <td>Подготовительные работы</td>
+                      <td>Ед. измер.</td>
+                      <td>Цена*</td>
+                    </tr>
+                    <tr>
+                      <td>прочие</td>
+                      <td>Укрытие пленкой</td>
+                      <td>м2</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>прочие</td>
+                      <td>Разгрузка материала </td>
+                      <td>т</td>
+                      <td>1716</td>
+                    </tr>
+                  </table>
+        </div>
+        <div id="popupCalc" class="form form--popup">				
+                <h2 class="form__popup-title">Отправить заявку на рассчет</h2>			
+                <form action="/zzzzerpolf23cvfdcva2gh.php" method="post">
+                        <div class="form__flex">					
+                                <div class="form__inner">
+                                        <input type="text" class="form__control form__control--popup" id="nameMedia" name="name" value="" placeholder="Введите Ваше имя">
+                                </div>	
+                                <div class="form__inner">
+                                        <input type="tel" class="form__control form__control--popup" id="phoneMedia" name="phone" size="25" value="" placeholder="+7 ___ ___-__-__" required>
+                                        <input type="hidden" class="text" name="dop" value="Специалисту на расчет">
+                                </div>
+                                <?php include "../assets-new/include/inputs.php"; ?>				
+                                <button type="submit" class="form__button form__button--popup">Узнать стоимость ремонта</button>
+                        </div>														
+                </form>
+                <p class="form__description">*Оставляя заявку вы соглашаетесь с правилами обработки персональныйх данных</p>	
+        </div>
+        <div id="popupDiscount" class="form form--popup mfp-hide">				
+                <h2 class="form__popup-title">Участие в акции</h2>			
+                <form action="/zzzzerpolf23cvfdcva2gh.php" method="post">
+                        <div class="form__flex">					
+                                <div class="form__inner">
+                                        <input type="text" class="form__control form__control--popup" id="nameMedia" name="name" value="" placeholder="Введите Ваше имя">
+                                </div>	
+                                <div class="form__inner">
+                                        <input type="tel" class="form__control form__control--popup" id="phoneMedia" name="phone" size="25" value="" placeholder="+7 ___ ___-__-__" required>
+                                        <input type="hidden" class="text" name="dop" value="Специалисту на расчет">
+                                </div>
+                                <?php include "../assets-new/include/inputs.php"; ?>					
+                                <button type="submit" class="form__button form__button--popup">Участвовать в акции</button>
+                        </div>														
+                </form>
+                <p class="form__description">*Оставляя заявку вы соглашаетесь с правилами обработки персональныйх данных</p>	
+        </div>
+        <div id="zvonok" class="form form--popup mfp-hide">				
+                <h2 class="form__popup-title">Остались вопросы?</h2>			
+                <form action="/zzzzerpolf23cvfdcva2gh.php" method="post">
+                        <div class="form__flex">					
+                                <div class="form__inner">
+                                        <input type="text" class="form__control form__control--popup" id="nameMedia" name="name" value="" placeholder="Введите ваше имя">
+                                </div>	
+                                <div class="form__inner">
+                                        <input type="tel" class="form__control form__control--popup" id="phoneMedia" name="phone" size="25" value="" placeholder="+7 ___ ___-__-__" required>
+                                        <input type="hidden" class="text" name="dop" value="Специалисту на расчет">
+                                </div>
+                                <?php include "../assets-new/include/inputs.php"; ?>					
+                                <button type="submit" class="form__button form__button--popup">Заказать обратный звонок</button>
+                        </div>														
+                </form>
+                <p class="form__description">*Оставляя заявку вы соглашаетесь с правилами обработки персональныйх данных</p>	
+        </div>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

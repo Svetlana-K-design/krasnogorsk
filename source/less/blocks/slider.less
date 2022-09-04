@@ -1,7 +1,3 @@
-.slider {
-  text-align: center;
-}
-
 .slider__list {
   .list-reset();
   position: relative;
@@ -14,6 +10,11 @@
   margin-right: 15px;
   margin-left: 15px;
   text-align: center;
+
+  &--max-width {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
 }
 
 
@@ -40,62 +41,139 @@
 	font-size: 0;
 	width: 10px;
 	height: 16px;
-  background: url('../img/icons/arrow-orange.svg') center center / 70% no-repeat;
+  background: url('../img/icons/arrow-orange.svg') center center / 80% no-repeat;
   border: none;
   bottom: 0;
+  cursor: pointer;
 
-  @media (min-width: @desktop-width) {
-    width: 32px;
-    height: 32px;
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 31px;
+    
   }
 }
 
 .slider__list .slick-arrow.slick-next{
+  right: 40px;
+}
+
+.slider__list .slick-arrow.slick-prev{
   transform: rotate(-180deg);
   left: 40px;
 }
 
-.slider__list .slick-arrow.slick-prev{
-  right: 40px;
+
+.slider__list .slick-arrow:hover {
+  transform: scale(1.33);
+  transition: all 0.7s ease-out;
 }
 
-/* Arrows for master and advantage */
-.master__list .slick-arrow.slick-prev,
-.advantage__list .slick-arrow.slick-prev  {
-	left: 16px;
-  bottom: -10px;
+.slider__list .slick-arrow.slick-prev:hover {
+  transform: rotate(-180deg) scale(1.33);
+}
+
+.slider__list .slick-arrow:active {
+  opacity: 0.6;
+}
+
+/* Arrow for master & portfolio */ 
+.master__slider .slick-arrow.slick-prev,
+.portfolio__slider .slick-arrow.slick-prev  {
+  @media (min-width: @tablet-width) {
+    top: calc(50% - 15.5px);
+  }
 
   @media (min-width: @desktop-width) {
-    left: -79px;
-    top: 50%;
-    margin-top: -50px;
+    left: -10px;
+  }
+
+  @media (min-width: 1230px) {
+    left: -50px;
   }
 }
 
-.master__list .slick-arrow.slick-next {
-  right: 16px;
-  bottom: -10px;
+.master__slider .slick-arrow.slick-next,
+.portfolio__slider .slick-arrow.slick-next  {
+  @media (min-width: @tablet-width) {
+    top: calc(50% - 15.5px);
+  }
 
   @media (min-width: @desktop-width) {
-    right: -79px;
-    top: 50%;
-    margin-top: -50px;
+    right: -10px;
+  }
+
+  @media (min-width: 1230px) {
+    right: -50px;
   }
 }
 
-/* Arrows for portfolio */
-.portfolio__list .slick-arrow {
-  top: 50%;
-  margin-top: -30px;
+/* Arrow for sale & reviews */ 
+
+.reviews__slider .slick-arrow.slick-prev,
+.sale__slider .slick-arrow.slick-prev  {
+  @media (min-width: @tablet-width) {
+      left: 40px;
+      bottom: 0;
+  }
+
+  @media (min-width: 992px) {
+    top: calc(50% - 15.5px);
+    left: calc(50% - 415px);
+  }
 }
 
-.portfolio__list .slick-arrow.slick-prev  {
-  left: 2px;
+.reviews__slider .slick-arrow.slick-next,
+.sale__slider .slick-arrow.slick-next {
+  @media (min-width: @tablet-width) {
+    right: 40px;
+    bottom: 0;
+}
+  @media (min-width: 992px) {
+    top: calc(50% - 15.5px);
+    right: calc(50% - 415px);
+  }
 }
 
-.portfolio__list .slick-arrow.slick-next  {
-  right: 2px;
+/* Arrow for documents */ 
+.documents__slider .slick-arrow.slick-prev  {
+  @media (min-width: @tablet-width) {
+    top: calc(50% - 60px);
+    left: 20px;
+  }
+
+  @media (min-width: 992px) {
+    left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -10px;
+  }
+
+  @media (min-width: 1230px) {
+    left: -50px;
+  }
 }
+
+.documents__slider .slick-arrow.slick-next  {
+  @media (min-width: @tablet-width) {
+    top: calc(50% - 60px);
+    right: 20px;
+  }
+
+
+  @media (min-width: 992px) {
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -10px;
+  }
+
+  @media (min-width: 1230px) {
+    right: -50px;
+  }
+}
+
 
 /* Dots */
 .slider__list .slick-dots {
@@ -103,6 +181,12 @@
 	align-items: flex-start;
 	justify-content: center;
   padding: 0;
+  margin: 0;
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width)  {
+    margin-top: 18px;
+  }
 }
 
 .slider__list .slick-dots li {
@@ -119,22 +203,10 @@
   border: none;
 }
 
-.slider .slick-dots li.slick-active button  {
+.slider__list .slick-dots  li.slick-active button  {
+  font-size: 0;
+	width: 14px;
+	height: 14px;
   background-color: @decor-orange;
 }
 
-.portfolio__list .slick-dots {
-  margin-top: -4px;
-
-  @media (min-width: @desktop-width)  {
-    margin-top: 2px;
-  }
-}
-
-.master__list .slick-dots {
-  margin-top: 8px;
-
-  @media (min-width: @desktop-width)  {
-    margin-top: 14px;
-  }
-}

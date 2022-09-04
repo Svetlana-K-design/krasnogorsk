@@ -1,5 +1,4 @@
 .sale {
-  width: 100%;
   background-color: @white-basic;
 }
 
@@ -16,14 +15,21 @@
   padding: 24px 16px;
   background-color: #f6f7f8;
   border-radius: 10px;
-  max-width: 729px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  margin-bottom: 67px;
+  text-align: left;
 
-  @media(min-width: @desktop-width)  {
-    margin-bottom: 32px;
+  @media(min-width: @tablet-width)  {
     padding: 24px;
+    max-width: 729px;
+    min-width: 729px;
+    min-height: 200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+.sale__slider {
+  @media(min-width: @tablet-width) {
+    margin-bottom: 32px;
   }
 }
 
@@ -46,6 +52,10 @@
   margin: 0;
 }
 
+.sale__text span {
+  color: @decor-orange;
+}
+
 .sale__text-bold {
   font-weight: 500;
   font-size: 16px;
@@ -53,6 +63,7 @@
   color: @decor-orange;
   margin: 0;
   margin-bottom: 8px;
+  text-align: center;
 
   @media(min-width: @desktop-width) {
     font-size: 20px;
@@ -68,11 +79,22 @@
   color: @decor-orange;
   text-align: center;
   margin-bottom: 16px;
+  margin-top: 29px;
 
   @media(min-width: @desktop-width) {
     font-size: 20px;
     line-height: 28px;
+    margin-top: 0;
     margin-bottom: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.5);
+    transition: all 0.7s ease-out;
+  }
+
+  &:active  {
+    opacity: 0.6;
   }
 }
 
@@ -83,4 +105,13 @@
   line-height: 24px;
   color: @decor-blue;
   text-align: center;
+
+  &:hover {
+    transform: scale(1.5);
+    transition: all 0.7s ease-out;
+  }
+
+  &:active  {
+    opacity: 0.6;
+  }
 }

@@ -41,9 +41,9 @@
 
 
 .btn() {
-  padding: 14px 10px;
+  padding: 12px 10px;
   width: 100%;
-  max-width: 320px;
+  min-width: 318px;
 
   font-size: 18px;
   line-height: 24px;
@@ -51,9 +51,8 @@
   font-family: "Golos", "Arial", sans-serif;
   color: @color-text;
   text-align: center;
-
+  border: 0;
   border-radius: 5px;
-  border: 2px solid @decor-orange;
   background-color: @decor-orange;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -62,6 +61,7 @@
 
   &:hover {
     background-color: transparent;
+    border: 2px solid @decor-orange;
   }
 
   &:active  {

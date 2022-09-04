@@ -20,13 +20,17 @@ $(document).ready(function() {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		arrows: true,
-		dots: true,    		
+		dots: true,
+		centerMode: true,
 		adaptiveHeight: true,
+		variableWidth: true,
 		responsive: [ 	
 			{
 			  breakpoint: 768,
 			  settings: {
 				slidesToShow: 1,
+				centerMode: false,
+				variableWidth: false
 			  }
 			}
 		]
@@ -34,16 +38,29 @@ $(document).ready(function() {
 
 	$('.sale__slider').slick({
 		infinite: true,
-		slidesToShow: 3,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
-		dots: true,    		
-		adaptiveHeight: true,
-		responsive: [ 	
+		dots: false,
+		centerMode: true,
+		adaptiveHeight: false,
+		variableWidth: true,
+		responsive: [ 
+			{
+				breakpoint: 992,
+				settings: {
+					dots: true,
+				}
+			  },
+
 			{
 			  breakpoint: 768,
 			  settings: {
 				slidesToShow: 1,
+				centerMode: false,
+				variableWidth: false,
+				adaptiveHeight: true,
+				dots: true,
 			  }
 			}
 		]
@@ -55,12 +72,18 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		dots: true,  
 		arrows: true,
-		dots: true,
 		responsive: [ 	
 			{
-			  breakpoint: 768,
+				breakpoint: 1200,
+				settings: {
+				  slidesToShow: 3,
+				}
+			  },
+
+			{
+			  breakpoint: 992,
 			  settings: {
-				slidesToShow: 3,
+				slidesToShow: 2,
 			  }
 			},
 		
@@ -104,12 +127,19 @@ if ($(window).width() < '992') {
 	$(".page-footer__caption").removeClass("active");
 }
 
+//Popup
 $('.popup').magnificPopup({		
 	type: "inline",
 	preloader: !1,
 	midClick: !0,
 	removalDelay: 300,
 	fixedContentPos: true,		
+});
+
+
+//Dropdoun
+$('.calculator__link').click(function(event) {
+	$('.calculator__wrapper--grey').toggleClass('active');
 });
 
 //Anchors (корректная работа с bLazy)
@@ -438,7 +468,7 @@ function validateForm(params) {
 
     const changeTypeRemont = function () {
     	let typeRemont = $('#type-remont-room').val();
-    	$('.form__remont-description').removeClass('active');
+    	$('.calculator__remont-description').removeClass('active');
     	$('#type-remont-room-' + typeRemont).addClass('active');
     }
     $('#type-remont-room').on('change', changeTypeRemont);

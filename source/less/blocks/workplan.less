@@ -7,8 +7,12 @@
     .title-h2();
     margin-bottom: 45px;
 
+    @media(min-width: @tablet-width) {
+        margin-bottom: 6px;
+    }
+
     @media(min-width: @desktop-width) {
-        margin-bottom: 53px;
+        margin-bottom: 14px;
     }
 }
 
@@ -48,12 +52,16 @@
 
     @media(min-width: @tablet-width) {
         max-width: auto;
-        width: calc(50% - 15px);
+        width: calc(50% - 30px);
+
+        &:first-child {
+            margin-top: 39px;
+        }
         
     }
 
     @media(min-width: 992px) {
-        width: calc(100% / 3 - 20px);
+        width: calc(100% / 3 - 30px);
     }
 }
 
@@ -61,22 +69,21 @@
     margin-top: 41px;
 
     @media(min-width: @tablet-width) {
-        margin-top: 0;
+        margin-top: 39px;
     }
 }
 
 .workplan__list {
     .list-reset();
     counter-reset: Mycounter;
-    margin-left: 21px;
+    margin-left: 15px;
 
     @media(min-width: @tablet-width) {
         display: flex;
         flex-wrap: wrap;
-        row-gap: 39px;
-        column-gap: 30px;
         justify-content: space-between;
         align-items: stretch;
+        margin-left: 0;
     }
 }
 

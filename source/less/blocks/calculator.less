@@ -116,6 +116,27 @@
 }
 
 //Grey-list
+.calculator__remont-description  {
+  display: none;
+}
+
+.calculator__remont-description.active  {
+  display: block;
+}
+
+.calculator__wrapper--grey {
+  display: none;
+
+  @media(min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.calculator__wrapper--grey.active {
+  display: block;
+}
+
+
 .calculator__subtitle {
   font-size: 20px;
   line-height: 24px;
@@ -156,7 +177,7 @@
   margin: 0;
 
   span {
-    color: #ffc69d;
+    color: #ff9447;
   }
 }
 

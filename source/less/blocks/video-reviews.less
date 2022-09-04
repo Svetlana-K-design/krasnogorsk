@@ -19,8 +19,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        row-gap: 24px;
         align-items: stretch;
+        margin-bottom: 0;
     }
 }
 
@@ -37,10 +37,11 @@
     @media(min-width: @tablet-width)  {
     max-width: calc(50% - 15px);
     margin: 0;
+    margin-bottom: 24px;
     }
 
     @media(min-width: 992px) {
-        max-width: calc(100% / 3 - 21px);
+        max-width: calc(100% / 3 - 14px);
     }
  }
 

@@ -81,6 +81,11 @@
   line-height: 20px;
   font-weight: 500;
   color: @color-text;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   &--bottom {
     background-color: #f6f7f8;
@@ -122,6 +127,11 @@ input[type=range]::-moz-range-thumb {
   width: 12px;
   height: 12px;
   margin-top: -5px;
+
+  &:hover {
+    transform: scale(1.5);
+    transition: all 0.7s ease-out;
+  }
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -133,6 +143,11 @@ input[type=range]::-webkit-slider-thumb {
   width: 12px;
   height: 12px;
   margin-top: -5px;
+
+  &:hover {
+    transform: scale(1.5);
+    transition: all 0.7s ease-out;
+  }
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -159,6 +174,7 @@ input[type="range"]::-ms-fill-upper {
   background-color: #d1d1d1;
 }
 
+
 //Input - select
 
 .form__wrapper {
@@ -170,10 +186,15 @@ input[type="range"]::-ms-fill-upper {
   width: 100%;
   background-color: #ECF1F7;
   border-radius: 3px;
-  border: none;
+  border: 1px  solid #ECF1F7;
   padding: 16px 14px;
   outline: none;
   box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @white-basic;
+  }
 
   font-size: 14px;
   line-height: 20px;

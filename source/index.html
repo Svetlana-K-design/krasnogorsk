@@ -8,7 +8,7 @@
         <title>Ремонт квартир в Москве под ключ</title>
         <meta name="description"
                 content="Сделаем ремонт квартиры без суеты, задержек и переплат! Под ключ и качественно!">
-        <meta name=«keywords» content=«ремонт под ключ, без переплат и задержек»>
+        <meta name="keywords" content="ремонт под ключ, без переплат и задержек">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
         <link href="css/style.min.css" rel="stylesheet">
 </head>
@@ -1544,13 +1544,11 @@
                                                 </ul>
                                         </li>
                                 </ul>
-                                </li>
-                                </ul>
                         </div>
                         <div class="navigation__banner animated animated-4 fadeInUp">
                                 <picture>
                                         <source srcset="img/other/nav-banner.webp">
-                                        <img class="b-lazy" data-src="img/other/nav-banner.jpg" width="284" height="544"
+                                        <img class="b-lazy" src="img/other/nav-banner.jpg" width="284" height="544"
                                                 alt="г. Москва, ММДЦ «Москва-Сити» Пресненская набережная 12, Башня Федерация Восток
           этаж 42, офис 4203">
                                 </picture>
@@ -1583,7 +1581,7 @@
                                                         <source
                                                                 srcset="img/portfolio/remont-gostinoj-v-4-k-kvartire-115-m2.webp">
                                                         <img class="b-lazy intro__img"
-                                                                data-src="img/portfolio/remont-gostinoj-v-4-k-kvartire-115-m2.jpg"
+                                                                src="img/portfolio/remont-gostinoj-v-4-k-kvartire-115-m2.jpg"
                                                                 width="590" height="339"
                                                                 alt="remont-gostinoj-v-4-k-kvartire-115-m2 Ремонт гостиной в 4-хкомнатной квартире, 115кв.м.">
                                                 </picture>
@@ -1605,12 +1603,12 @@
                                                                         min="10" max="50" step="1" name="step"
                                                                         list="step-values"
                                                                         oninput="document.querySelector('#import').value=this.value">
-                                                                <datalist class="form_meter" id="step-values">
-                                                                        <option value="10" label="10 м2" />
-                                                                        <option value="20" label="20 м2" />
-                                                                        <option value="30" label="30 м2" />
-                                                                        <option value="40" label="40 м2" />
-                                                                        <option value="50" label="50 м2" />
+                                                                <datalist class="form__meter" id="step-values">
+                                                                        <option value="10" label="10 м2"></option>
+                                                                        <option value="20" label="20 м2"></option>
+                                                                        <option value="30" label="30 м2"></option>
+                                                                        <option value="40" label="40 м2"></option>
+                                                                        <option value="50" label="50 м2"></option>
                                                                 </datalist>
                                                         </fieldset>
                                                         <fieldset class="form__border">
@@ -1621,13 +1619,13 @@
                                                                         min="0" max="5" step="1" name="step-two"
                                                                         list="step-room"
                                                                         oninput="document.querySelector('#import-two').value=this.value">
-                                                                <datalist class="form_meter" id="step-room">
-                                                                        <option value="0" label="Студия" />
-                                                                        <option value="1" label="1-к" />
-                                                                        <option value="2" label="2-к" selected />
-                                                                        <option value="3" label="3-к" />
-                                                                        <option value="4" label="4-к" />
-                                                                        <option value="5" label="5-к" />
+                                                                <datalist class="form__meter" id="step-room">
+                                                                        <option value="0" label="Студия"></option>
+                                                                        <option value="1" label="1-к"></option>
+                                                                        <option value="2" label="2-к" selected></option>
+                                                                        <option value="3" label="3-к"></option>
+                                                                        <option value="4" label="4-к"></option>
+                                                                        <option value="5" label="5-к"></option>
                                                                 </datalist>
                                                         </fieldset>
                                                         <div class="form__wrapper form__wrapper--select">
@@ -1652,8 +1650,8 @@
                                                         <input class="form__button form__button--white" type="submit"
                                                                 value="Узнать стоимость ремонта">
                                                 </form>
-                                                <a class="calculator__link" for="type-remont-room">Что включает в себя
-                                                        ремонт?</a>
+                                                <span class="calculator__link">Что включает в себя
+                                                        ремонт?</span>
                                         </div>
                                         <div class="calculator__wrapper calculator__wrapper--grey">
                                                 <div class="calculator__remont-description active tabcontent"
@@ -1737,6 +1735,7 @@
                 </section>
                 <section class="company">
                         <div class="company__container container container--50tb">
+                                <h2 class="visually-hidden">Информация о компании</h2>
                                 <p class="company__text">«Студия Ремонтов» с 2016 года выполняет капитальные,
                                         косметические, дизайнерские ремонты под ключ в
                                         Красногорске
@@ -1748,17 +1747,17 @@
                                 <div class="company__img-block">
                                         <picture>
                                                 <source srcset="img/other/apart.webp">
-                                                <img class="b-lazy company__img" data-src="img/other/apart.jpg"
+                                                <img class="b-lazy company__img" src="img/other/apart.jpg"
                                                         width="328" height="262" alt="Фото квартиры">
                                         </picture>
                                         <picture>
                                                 <source srcset="img/other/sketch.webp">
-                                                <img class="b-lazy company__img" data-src="img/other/sketch.jpg"
+                                                <img class="b-lazy company__img" src="img/other/sketch.jpg"
                                                         width="328" height="262" alt="Фото квартиры">
                                         </picture>
                                         <picture>
                                                 <source srcset="img/other/plan.webp">
-                                                <img class="b-lazy company__img" data-src="img/other/plan.jpg"
+                                                <img class="b-lazy company__img" src="img/other/plan.jpg"
                                                         width="328" height="262" alt="Фото квартиры">
                                         </picture>
                                 </div>
@@ -1999,7 +1998,7 @@
                         </div>
                 </section>
                 <section id="portfolio" class="portfolio">
-                        <div class="portfolio__container container container--50tb">
+                        <div class="portfolio__container container container--50tb slider">
                                 <h2 class="portfolio__title">Фото и цены выполненных работ</h2>
                                 <div class="portfolio__slider slider__list">
                                         <div class="portfolio__slide slider__item">
@@ -2443,7 +2442,7 @@
                         </div>
                 </section>
                 <section id="master" class="master">
-                        <div class="master__container container container--50tb">
+                        <div class="master__container container container--50tb slider">
                                 <h2 class="master__title">Наши мастера </h2>
                                 <div class="master__slider slider__list">
                                         <div class="master__slide slider__item">
@@ -2726,6 +2725,7 @@
                 </section>
                 <section class="company">
                         <div class="company__container container container--50tb">
+                                <h2 class="visually-hidden">Информация о компании</h2>
                                 <p class="company__text-bold">В “Студии Ремонтов” за каждый этап ремонта отвечает профильный специалист — это
                                         позволяет
                                         предельно сосредоточиться на задаче и выполнить ее аккуратно и качественно. В “Студии Ремонтов”
@@ -2742,7 +2742,7 @@
                                                 <source type="image/webp" srcset="img/other/o-nas-d-mobile.webp">
                                                 <source media="(min-width: 1100px)" srcset="img/other/o-nas-d-desktop.jpg">
                                                 <source media="(min-width: 768px)" srcset="img/other/o-nas-d-tablet.jpg">
-                                                <img class="b-lazy company__img-2" data-src="img/other/o-nas-d-mobile.jpg" alt="Фото офиса компании">
+                                                <img class="b-lazy company__img-2" src="img/other/o-nas-d-mobile.jpg" alt="Фото офиса компании">
                                         </picture>
                                 </div>
                                 <p class="company__text company__text--middle">Мы ставим индивидуальный подход к клиентам выше собственной выгоды. Поэтому
@@ -2756,7 +2756,7 @@
                                                 <source type="image/webp" media="(min-width: 1100px)" srcset="img/other/o-nas-work-desktop.webp">
                                                 <source type="image/webp" srcset="img/other/o-nas-work-m.webp">
                                                 <source media="(min-width: 1100px)" srcset="img/other/o-nas-work-desktop.jpg">
-                                                <img class="b-lazy company__img-2" data-src="img/other/o-nas-work-m.jpg" alt="Фото рабочего процесса">
+                                                <img class="b-lazy company__img-2" src="img/other/o-nas-work-m.jpg" alt="Фото рабочего процесса">
                                         </picture>
                                 </div>
                                 <p class="company__text">Бригады “Студии Ремонтов” работают максимально быстро и эффективно. Капитальный
@@ -2778,12 +2778,12 @@
                                                         min="10" max="50" step="1" name="step"
                                                         list="step-values"
                                                         oninput="document.querySelector('#import').value=this.value">
-                                                <datalist class="form_meter" id="step-values">
-                                                        <option value="10" label="10 м2" />
-                                                        <option value="20" label="20 м2" />
-                                                        <option value="30" label="30 м2" />
-                                                        <option value="40" label="40 м2" />
-                                                        <option value="50" label="50 м2" />
+                                                <datalist class="form__meter" id="step-values">
+                                                        <option value="10" label="10 м2"></option>
+                                                        <option value="20" label="20 м2"></option>
+                                                        <option value="30" label="30 м2"></option>
+                                                        <option value="40" label="40 м2"></option>
+                                                        <option value="50" label="50 м2"></option>
                                                 </datalist>
                                         </fieldset>
                                         <fieldset class="form__border">
@@ -2794,13 +2794,13 @@
                                                         min="0" max="5" step="1" name="step-two"
                                                         list="step-room"
                                                         oninput="document.querySelector('#import-two').value=this.value">
-                                                <datalist class="form_meter" id="step-room">
-                                                        <option value="0" label="Студия" />
-                                                        <option value="1" label="1-к" />
-                                                        <option value="2" label="2-к" selected />
-                                                        <option value="3" label="3-к" />
-                                                        <option value="4" label="4-к" />
-                                                        <option value="5" label="5-к" />
+                                                <datalist class="form__meter" id="step-room">
+                                                        <option value="0" label="Студия"></option>
+                                                        <option value="1" label="1-к"></option>
+                                                        <option value="2" label="2-к" selected></option>
+                                                        <option value="3" label="3-к"></option>
+                                                        <option value="4" label="4-к"></option>
+                                                        <option value="5" label="5-к"></option>
                                                 </datalist>
                                         </fieldset>
                                         <div class="form__wrapper form__wrapper--select">
@@ -2867,7 +2867,7 @@
                         </div>
                 </section>
                 <section id="reviews" class="reviews">
-                        <div class="reviews__container container container--max-width container--50tb">
+                        <div class="reviews__container container container--max-width container--50tb slider">
                                 <h2 class="reviews__title">Отзывы клиентов о работе</h2>
                                 <div class="reviews__slider slider__list">
                                         <div class="reviews__slide slider__item slider__item--max-width">
@@ -3088,7 +3088,7 @@
                         </div>
                 </section>
                 <section class="sale">
-                        <div class="sale__container container container--max-width container--50tb">
+                        <div class="sale__container container container--max-width container--50tb slider">
                             <h2 class="sale__title">Акции и скидки</h2>
                             <div class="sale__slider slider__list">
                                 <div class="sale__slide slider__item slider__item--max-width">
@@ -3120,7 +3120,7 @@
                         </div>
                 </section>
                 <section id="documents" class="documents">
-                        <div class="documents__container container container--50tb">
+                        <div class="documents__container container container--50tb slider">
                                 <h2 class="documents__title">Отзывы клиентов о работе</h2>
                                 <p class="documents__subtitle">ИНН: 7743152366, ОГРН: 1167746404517</p>
                                 <div class="documents__slider documents__list slider__list">
@@ -4049,7 +4049,6 @@
                 <p class="form__description">*Оставляя заявку вы соглашаетесь с правилами обработки персональныйх данных</p>	
         </div>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/magnific.min.js"></script>

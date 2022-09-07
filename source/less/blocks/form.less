@@ -1,9 +1,10 @@
 .form--bottom {
   background-color: #f6f7f8;
-  max-width: 674px;
+  max-width: 500px;
   margin: 0 auto;
 
   @media(min-width: @tablet-width) {
+    max-width: 674px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -74,9 +75,8 @@
     }
 }
 
-.form__meter--room option {
-  min-width: 44px;
-  text-align: center;
+.form__meter--room option:first-of-type {
+  width: 12px;
 }
 
 .form__import {

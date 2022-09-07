@@ -5,21 +5,29 @@
 
 .company__img-block {
   margin-bottom: 24px;
-
+  width: 100%;
+  
   @media(min-width: @tablet-width) {
     display: flex;
-    justify-content: center;
-  }
-
-  @media(min-width: @desktop-width) {
-    justify-content: space-between;
+    width: calc(100% - 5px);
   }
 }
 
 .company__img {
-  @media(min-width: @desktop-width) {
-    width: 360px;
-    height: auto;
+  max-width: 360px;
+  margin: 0 auto;
+
+  @media(min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.company__img + .company__img{
+  margin-top: 5px;
+
+  @media(min-width: @tablet-width) {
+    margin-left: 5px;
+    margin-top: 0;
   }
 }
 

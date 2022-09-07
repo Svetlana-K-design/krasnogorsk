@@ -515,3 +515,40 @@ $('.reviews__link-blue').on('click', function() {
 	let newHeightSlickList = heightSlickList + diff;		
 	slickList.css('height', newHeightSlickList);
 });
+
+//form input type=range
+const setValueNumberRoom = function () {
+	const roomRangeIn = ['#import-two', '#import-two-bottom'];
+	const roomRangeOut = ['#fader-two', '#fader-two-bottom'];
+	for (let i=0; i < roomRangeIn.length; i++) {
+		$(roomRangeIn[i]).val($(roomRangeOut[i]).val() + ' ' + 'комнаты');
+		$(roomRangeOut[i]).on('input', function() {
+			let text;
+			if ($(this).val() == '0') {
+				$(roomRangeIn[i]).val('Студия');
+			}  else {
+				if ($(this).val() == '1') {
+					text = 'комната';  		
+				} else if ($(this).val() == '2' || $(this).val() == '3' || $(this).val() == '4') {
+					text = 'комнаты';	
+				} else if ($(this).val() == '5') {
+					text = 'комнат';	
+				}
+				$(roomRangeIn[i]).val($(this).val() + ' ' + text);
+			}  	
+		});
+	}
+}
+setValueNumberRoom();
+
+const setSquareRoom = function () {
+	const squareRangeIn = ['#import', '#import-bottom'];
+	const squareRangeOut = ['#fader', '#fader-bottom'];
+	for (let i=0; i < squareRangeIn.length; i++) {
+		$(squareRangeIn[i]).val($(squareRangeOut[i]).val() + ' ' + 'м2');
+		$(squareRangeOut[i]).on('input', function() {
+			$(squareRangeIn[i]).val($(this).val() + ' ' + 'м2');
+		});
+	}
+}
+setSquareRoom();

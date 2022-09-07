@@ -8,11 +8,16 @@
     width: 100%;
     height: 527px;
     overflow: hidden;
-    background: url(../img/other/bg-map-320.jpg) center center / cover no-repeat;
+    background: url("../img/other/bg-map-992.jpg") 0 center / cover no-repeat;
 
     @media (min-width: 992px) {
         height: 668px;
-        background: url(../img/other/bg-map-1920.jpg) center center / cover no-repeat;
+        background: url("../img/other/bg-map-1366.jpg") center center / cover no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+        height: 668px;
+        background: url("../img/other/bg-map-1920.jpg") center center / cover no-repeat;
     }
 }
 
@@ -119,6 +124,16 @@
     font-weight: 500;
     color: @decor-blue;
     text-align: center;
+    transition: all 0.7s ease-out;
+
+    &:hover {
+      transform: scale(1.5);
+      transition: all 0.7s ease-out;
+    }
+  
+    &:active  {
+      opacity: 0.6;
+    }
 }
 
 .contacts__item.active {

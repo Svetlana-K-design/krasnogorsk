@@ -26,7 +26,7 @@ $(document).ready(function() {
 		variableWidth: true,
 		responsive: [ 	
 			{
-			  breakpoint: 768,
+			  breakpoint: 992,
 			  settings: {
 				slidesToShow: 1,
 				centerMode: false,
@@ -501,3 +501,17 @@ if (pageVacancy.length > 0) {
   tabVacancy.addClass('active');
   vacancyTab.addClass('active');
 }
+
+$('.reviews__link-blue').on('click', function() {
+	const reviewsBlock = $(this).parent().find('.reviews__block');
+	const slickList = $('.reviews__slider .slick-list');
+	const marginBlock = parseInt(reviewsBlock.css('margin-bottom'));		
+	const heightFirst = reviewsBlock.height();
+	const heightSlickList = slickList.height();
+	$(this).hide();
+	reviewsBlock.addClass('active');		
+	let heightSecond = reviewsBlock.height();
+	let diff = heightSecond - (heightFirst + $(this).height() + marginBlock);
+	let newHeightSlickList = heightSlickList + diff;		
+	slickList.css('height', newHeightSlickList);
+});

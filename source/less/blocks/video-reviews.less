@@ -80,6 +80,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
+    background-color: @black-basic;
   }
 
   .video-reviews__head {
@@ -92,6 +93,10 @@
 
   .video-reviews__desc {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 72px;
   }
 
   .video-reviews__name  {
@@ -99,7 +104,6 @@
     line-height: 18px;
     font-weight: 500;
     margin: 0;
-    margin-bottom: 4px;
   }
 
   .video-reviews__info {
@@ -138,6 +142,7 @@
     display: block;
     width: 100%;
     margin: 0 auto;
+    transition: all 0.7s ease-out;
 
     &:hover {
       transform: scale(1.33);

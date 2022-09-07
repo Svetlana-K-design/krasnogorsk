@@ -70,12 +70,11 @@
   &--grey {
     background-color: @bg-block-grey;
     padding: 20px 16px;
-    
-    box-sizing: 317px;
     margin-bottom: 18px;
 
     @media(min-width: @tablet-width) {
       max-width: 317px;
+      margin-bottom: 0;
     }
 
     @media(min-width: 992px) {
@@ -105,6 +104,15 @@
   text-decoration-style: dashed;
   text-align: center;
   text-underline-offset: 5px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media(min-width: 481px) {
     text-align: left;
@@ -116,12 +124,15 @@
 }
 
 //Grey-list
-.calculator__remont-description  {
+.calculator__remont-description {
   display: none;
 }
 
-.calculator__remont-description.active  {
-  display: block;
+.calculator__remont-description.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 330px;
 }
 
 .calculator__wrapper--grey {
@@ -147,7 +158,6 @@
 
 .calculator__remont-list {
   .list-reset();
-  margin-bottom: 110px; 
 }
 
 .calculator__remont-item {
@@ -157,7 +167,7 @@
   padding: 0;
   margin-bottom: 4px;
   position: relative;
-  padding-left:  14px;
+  padding-left: 14px;
 
   &::before {
     content: "";
@@ -181,7 +191,7 @@
   }
 }
 
-.calculator__wrapper--grey p + p {
+.calculator__wrapper--grey p+p {
   margin-top: 4px;
 }
 
@@ -208,7 +218,7 @@
   font-size: 16px;
   padding: 0;
   position: relative;
-  padding-left:  68px;
+  padding-left: 68px;
   display: block;
   min-height: 52px;
   padding-top: 16px;
@@ -238,30 +248,30 @@
 
   @media(min-width: @desktop-width) {
     margin-bottom: 48px;
-    width: auto; 
+    width: auto;
 
     &:last-child {
       margin-bottom: 0;
     }
-  } 
+  }
 }
 
 .calculator__advantage-item--money::before {
-    background-image: url("../img/icons/money.svg");
-  }
+  background-image: url("../img/icons/money.svg");
+}
 
 
 .calculator__advantage-item--100 {
-    &::before {
+  &::before {
     background-image: url("../img/icons/100.svg");
-    }
+  }
 }
 
 .calculator__advantage-item--package {
-    padding-top: 7px;
-    padding-bottom: 9px;
+  padding-top: 7px;
+  padding-bottom: 9px;
 
-     &::before {
+  &::before {
     background-image: url("../img/icons/package.svg");
   }
 
@@ -277,5 +287,5 @@
 }
 
 .calculator__advantage-item--shield::before {
-    background-image: url("../img/icons/shield.svg");
+  background-image: url("../img/icons/shield.svg");
 }

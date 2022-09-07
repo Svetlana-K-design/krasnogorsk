@@ -36,9 +36,12 @@
   padding: 16px;
   border-radius: 10px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media(min-width: @desktop-width) {
-    padding: 20px 24px 43px;
+    padding: 20px 24px;
     min-width: 443px;
     box-sizing: border-box;
   }
@@ -68,7 +71,7 @@
     margin-bottom: 14px;
 
     @media(min-width: @desktop-width) {
-      margin-bottom: 24px;
+      margin-bottom: 0;
     }
   }
 
@@ -87,27 +90,13 @@
       color: @decor-orange;
     }
 
-    &:first-of-type {
-      margin-bottom: 14px;
-
-      @media(min-width: @desktop-width) {
-        margin-bottom: 4px;
-      }
-    }
-
-    &:last-of-type,
-    &:nth-of-type(2) {
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
 
   .portfolio__text-list {
     .list-reset();
-    margin-bottom: 14px;
-
-    @media(min-width: @desktop-width) {
-      margin-bottom: 10px;
-    }
   }
 
   .portfolio__text-item {
@@ -117,6 +106,21 @@
     color: @decor-orange;
   }
 
+  .portfolio__desc-medium {
+    margin-bottom: 14px;
+
+    .portfolio__text:first-of-type {
+      margin-bottom: 14px;
+
+      @media(min-width: @desktop-width) {
+        margin-bottom: 4px;
+      }
+    }
+
+    @media(min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
 
 //Tabs and arrows
 

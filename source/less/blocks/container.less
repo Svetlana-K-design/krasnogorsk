@@ -3,8 +3,12 @@
   padding: 0 16px 18px;
   margin: 0 auto;
 
-  &--header {
+  &--header,
+  &--header-width {
     max-width: 1300px;
+  }
+
+  &--header {
     padding: 0 16px; 
   }
 
@@ -30,4 +34,9 @@
       padding-right: 0;
     }
   }
+}
+
+.container__intro {
+  max-width: @desktop-width;
+  margin: 0 auto;
 }

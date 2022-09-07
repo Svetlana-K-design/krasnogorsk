@@ -7,17 +7,17 @@ var myMapTemp, myPlacemarkTemp;
 //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
 function init () {
   var myMapTemp = new ymaps.Map("map-yandex", {
-    center: [55.749781,37.537899], // координаты центра на карте
+    center: [55.837606, 37.341637], // координаты центра на карте
     zoom: 16, // коэффициент приближения карты
     controls: ['zoomControl', 'fullscreenControl', 'geolocationControl', 'routeButtonControl', 'typeSelector'] // выбираем только те функции, которые необходимы при использовании
   });
 
-  /*if ($(window).width() >= 768) {
+  if ($(window).width() >= 768) {
     var position = myMapTemp.getGlobalPixelCenter();
-    myMapTemp.setGlobalPixelCenter([position[0] + 200, position[1]]);
-  }*/
+    myMapTemp.setGlobalPixelCenter([position[0] + 300, position[1]]);
+  }
 
-  var myPlacemarkTemp = new ymaps.Placemark([55.749781,37.537899], {
+  var myPlacemarkTemp = new ymaps.Placemark([55.837606, 37.341637], {
     balloonContent: "Здесь может быть ваш адрес",
   }, {
       // Опции.

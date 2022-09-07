@@ -74,6 +74,11 @@
     }
 }
 
+.form__meter--room option {
+  min-width: 44px;
+  text-align: center;
+}
+
 .form__import {
   border: none;
   outline: none;
@@ -106,7 +111,9 @@
 input[type=range] {
   width: 100%;
   appearance: none;
-  overflow: hidden;
+  overflow: visible;
+  outline: none;
+  transition: all 0.7s ease-out;
 
   @media(min-width: 481px) {
     max-width: 500px;
@@ -127,6 +134,8 @@ input[type=range]::-moz-range-thumb {
   width: 12px;
   height: 12px;
   margin-top: -5px;
+  transition: all 0.7s ease-out;
+  text-align: center;
 
   &:hover {
     transform: scale(1.5);
@@ -143,6 +152,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 12px;
   height: 12px;
   margin-top: -5px;
+  transition: all 0.7s ease-out;
 
   &:hover {
     transform: scale(1.5);
@@ -232,13 +242,10 @@ input[type="range"]::-ms-fill-upper {
 //Button
 
 .form__button {
+  display: block;
   .btn(); 
   margin-bottom: 18px;
   box-sizing: border-box;
-
-  &--white {
-    min-width: 288px;
-  }
 
   @media(min-width: 481px) {
     max-width: 500px;
@@ -250,6 +257,13 @@ input[type="range"]::-ms-fill-upper {
 
   @media(min-width: @desktop-width) {   
     max-width: 318px;
+  }
+
+  &--white {
+    @media(min-width: @tablet-width) {
+      min-width: 318px;
+    }
+
   }
 
   &--bottom {
@@ -330,4 +344,9 @@ input[type="range"]::-ms-fill-upper {
   margin: 0;
   margin-top: 15px;
   font-weight: 400;
+}
+
+//error
+.form__control.error {
+  border: 1px  solid red;
 }

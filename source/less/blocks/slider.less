@@ -1,3 +1,7 @@
+.slider {
+  overflow: hidden;
+}
+
 .slider__list {
   .list-reset();
   position: relative;
@@ -12,8 +16,13 @@
   text-align: center;
 
   &--max-width {
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
   }
 }
 
@@ -45,6 +54,7 @@
   border: none;
   bottom: 0;
   cursor: pointer;
+  transition: all 0.7s ease-out;
 
   @media (min-width: @tablet-width) {
     width: 20px;

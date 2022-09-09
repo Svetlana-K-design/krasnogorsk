@@ -8,7 +8,6 @@
 }
 
 .portfolio__photo {
-  min-width: 328px;
   max-width: 635px;
   border-radius: 10px;
   margin: 0;
@@ -122,62 +121,8 @@
     }
   }
 
-//Tabs and arrows
-
-.portfolio__tabs  {
-  margin: 0 auto;
-  min-width: 284px;
-  max-width: 760px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px; 
-  z-index: 10;
-  position: relative;
-
-  @media(min-width: 992px) {
-    margin-bottom: -20px; 
-  }
-
+.portfolio__text-item--hidden {
   @media(min-width: @desktop-width) {
-    margin-bottom: -28px; 
+    display: none;
   }
 }
-
-
-.portfolio__tab {
-  display: block;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  cursor: pointer;
-
-  @media(min-width: @desktop-width) {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-
-.portfolio__tab:hover {
-  transform: scale(1.33);
-  transition: all 0.7s ease-out;
-}
-
-.portfolio__tab:active {
-  opacity: 0.6;
-}
-
-.portfolio__tab--prev {
-  padding: 0;
-  padding-left: 25px;
-  background: url('../img/icons/arrow-orange.svg') left center / 20% no-repeat;
-}
-
-.portfolio__tab--next {
-  padding: 0;
-  padding-right: 25px;
-  background: url('../img/icons/arrow-black-orange.svg') right center / 20% no-repeat;
-}
-
-

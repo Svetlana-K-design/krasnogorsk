@@ -194,13 +194,17 @@ input[type="range"]::-ms-fill-upper {
 
 .form__control {
   width: 100%;
-  background-color: #ECF1F7;
   border-radius: 3px;
   border: 1px  solid #ECF1F7;
   padding: 16px 14px;
   outline: none;
   box-sizing: border-box;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(../img/icons/arrow-select.svg) no-repeat right @bg-block-grey;
+  background-position-x: calc(100% - 14px);
 
   &:hover {
     background-color: @white-basic;

@@ -8,8 +8,17 @@
   width: 100%;
   
   @media(min-width: @tablet-width) {
-    display: flex;
-    width: calc(100% - 5px);
+    display: none;
+  }
+}
+
+.company__img-block-desk {
+  display: none;
+  
+  @media(min-width: @tablet-width) {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
   }
 }
 
@@ -28,6 +37,10 @@
   @media(min-width: @tablet-width) {
     margin-left: 5px;
     margin-top: 0;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-left: 10px;
   }
 }
 

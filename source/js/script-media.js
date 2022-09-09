@@ -25,14 +25,14 @@ $(document).ready(function() {
 		adaptiveHeight: true,
 		variableWidth: true,
 		responsive: [ 	
-			{
-			  breakpoint: 992,
-			  settings: {
+		{
+			breakpoint: 992,
+			settings: {
 				slidesToShow: 1,
 				centerMode: false,
 				variableWidth: false
-			  }
 			}
+		}
 		]
 	});
 
@@ -46,23 +46,23 @@ $(document).ready(function() {
 		adaptiveHeight: false,
 		variableWidth: true,
 		responsive: [ 
-			{
-				breakpoint: 992,
-				settings: {
-					dots: true,
-				}
-			  },
+		{
+			breakpoint: 992,
+			settings: {
+				dots: true,
+			}
+		},
 
-			{
-			  breakpoint: 768,
-			  settings: {
+		{
+			breakpoint: 768,
+			settings: {
 				slidesToShow: 1,
 				centerMode: false,
 				variableWidth: false,
 				adaptiveHeight: true,
 				dots: true,
-			  }
 			}
+		}
 		]
 	});
 
@@ -73,33 +73,33 @@ $(document).ready(function() {
 		dots: true,  
 		arrows: true,
 		responsive: [ 	
-			{
-				breakpoint: 1200,
-				settings: {
-				  slidesToShow: 3,
-				}
-			  },
-
-			{
-			  breakpoint: 992,
-			  settings: {
-				slidesToShow: 2,
-			  }
-			},
-		
-			{
-			  breakpoint: 481,
-			  settings: {
-				slidesToShow: 1,	
-			  }
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3,
 			}
+		},
+
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
 		
-			]
+		{
+			breakpoint: 481,
+			settings: {
+				slidesToShow: 1,	
+			}
+		}
+		
+		]
 	});
 
 //galery
 
-$('.portfolio__item').magnificPopup({
+$('.portfolio__slide--popup').magnificPopup({
 	delegate: 'a',
 	type: 'image',
 	tLoading: 'Loading image #%curr%...',
@@ -144,32 +144,32 @@ $('.calculator__link').click(function(event) {
 
 //Anchors (корректная работа с bLazy)
 $('.site-list__link').on('click', function(e) {
-e.preventDefault();  
-var targetSelector = this.hash;
-var $target = $(targetSelector);
+	e.preventDefault();  
+	var targetSelector = this.hash;
+	var $target = $(targetSelector);
 
-$('html, body').animate(
-{
+	$('html, body').animate(
+	{
 		scrollTop: $target.offset().top - 80 // Scroll to this location.
-	  }, {            
+	}, {            
 		duration: 2000,
 
 		// At each animation step, check whether the target has moved.
 		step: function( now, fx ) {
-		  var newOffset = $target.offset().top - 80;                
-		  if(fx.end !== newOffset)
-			fx.end = newOffset;
+			var newOffset = $target.offset().top - 80;                
+			if(fx.end !== newOffset)
+				fx.end = newOffset;
 		}
-	  }
-	  );
+	}
+	);
 });
 
 //  Down
 $('.down').on('click', function(e) {
-   e.preventDefault();
-   var id  = $(this).attr('href');
-   var top = $(id).offset().top;
-   $('body,html').animate({scrollTop: top}, 1000); 
+	e.preventDefault();
+	var id  = $(this).attr('href');
+	var top = $(id).offset().top;
+	$('body,html').animate({scrollTop: top}, 1000); 
 });
 
 // Основная навигация
@@ -206,9 +206,9 @@ $('.main-nav__toggle-name').on(event, function(){
 		navWrapper.removeClass('navigation--opened').slideToggle('slow').addClass('navigation--closed');
 		navOverlay.removeClass('active');			
 	}
-  $('.social__link').on('click', function(e) {
-	e.stopPropagation();
-  });
+	$('.social__link').on('click', function(e) {
+		e.stopPropagation();
+	});
 });
 
 navOverlay.on('click', function(){
@@ -351,8 +351,8 @@ $(function() {
 			// Заменяем миниатюру HTML5 плеером с YouTube
 			$(this).replaceWith(iframe);
 
-	   });
-   });
+		});
+	});
 });		
 
 
@@ -397,7 +397,7 @@ function validateForm(params) {
 
       // Функция проверки полей формы
       function checkInput(){
-      	form.find('.form__control').each(function(){
+      	form.find('.form__control:not(.form__control--select)').each(function(){
       		if($(this).val() != '' && $(this).val().indexOf('_') == -1) {
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty-field');
@@ -457,6 +457,8 @@ function validateForm(params) {
     validateForm('#popupFroze form');
     validateForm('#popupCalc-1 form');
     validateForm('#popupCallback form');
+    validateForm('#calcForm');
+	validateForm('#zvonok');
 
     function locationHashChanged() {
     	if (location.hash) {
@@ -479,42 +481,42 @@ function validateForm(params) {
 
 
   $('.contacts__item').on('click', function(e){
-	e.preventDefault();
-	$('.contacts__item').removeClass('active');
-	$(this).addClass('active');
+  	e.preventDefault();
+  	$('.contacts__item').removeClass('active');
+  	$(this).addClass('active');
 
-	var navTab = $(this).data('tab');
+  	var navTab = $(this).data('tab');
 
-	$('.contacts__tab').removeClass('active');
+  	$('.contacts__tab').removeClass('active');
 
-	$('#tab-' + navTab).addClass('active');
+  	$('#tab-' + navTab).addClass('active');
 
-});
+  });
 
-var pageVacancy = $('.page-vacancy');
-var tabVacancy = $('[data-tab=3]');
-var vacancyTab = $('[id=tab-3]');
+  var pageVacancy = $('.page-vacancy');
+  var tabVacancy = $('[data-tab=3]');
+  var vacancyTab = $('[id=tab-3]');
 
-if (pageVacancy.length > 0) {
-  $('.contacts__tab').removeClass('active');
-  $('.contacts__item').removeClass('active');
-  tabVacancy.addClass('active');
-  vacancyTab.addClass('active');
-}
+  if (pageVacancy.length > 0) {
+  	$('.contacts__tab').removeClass('active');
+  	$('.contacts__item').removeClass('active');
+  	tabVacancy.addClass('active');
+  	vacancyTab.addClass('active');
+  }
 
-$('.reviews__link-blue').on('click', function() {
-	const reviewsBlock = $(this).parent().find('.reviews__block');
-	const slickList = $('.reviews__slider .slick-list');
-	const marginBlock = parseInt(reviewsBlock.css('margin-bottom'));		
-	const heightFirst = reviewsBlock.height();
-	const heightSlickList = slickList.height();
-	$(this).hide();
-	reviewsBlock.addClass('active');		
-	let heightSecond = reviewsBlock.height();
-	let diff = heightSecond - (heightFirst + $(this).height() + marginBlock);
-	let newHeightSlickList = heightSlickList + diff;		
-	slickList.css('height', newHeightSlickList);
-});
+  $('.reviews__link-blue').on('click', function() {
+  	const reviewsBlock = $(this).parent().find('.reviews__block');
+  	const slickList = $('.reviews__slider .slick-list');
+  	const marginBlock = parseInt(reviewsBlock.css('margin-bottom'));		
+  	const heightFirst = reviewsBlock.height();
+  	const heightSlickList = slickList.height();
+  	$(this).hide();
+  	reviewsBlock.addClass('active');		
+  	let heightSecond = reviewsBlock.height();
+  	let diff = heightSecond - (heightFirst + $(this).height() + marginBlock);
+  	let newHeightSlickList = heightSlickList + diff;		
+  	slickList.css('height', newHeightSlickList);
+  });
 
 //form input type=range
 const setValueNumberRoom = function () {

@@ -20,6 +20,7 @@
 .form--bottom .form__wrapper {
   @media(min-width: @tablet-width) {
     margin-bottom: 24px;
+    min-width: 318px;
   }
 }
 
@@ -203,8 +204,7 @@ input[type="range"]::-ms-fill-upper {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url(../img/icons/arrow-select.svg) no-repeat right @bg-block-grey;
-  background-position-x: calc(100% - 14px);
+  background-color: @bg-block-grey;
 
   &:hover {
     background-color: @white-basic;

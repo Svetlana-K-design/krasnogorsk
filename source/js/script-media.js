@@ -554,3 +554,9 @@ const setSquareRoom = function () {
 	}
 }
 setSquareRoom();
+
+//Select style
+
+$(function(){
+    $('.form__control--select').selectric();
+});
